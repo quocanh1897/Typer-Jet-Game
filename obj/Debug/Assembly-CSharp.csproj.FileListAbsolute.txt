@@ -1,0 +1,67 @@
+D:\unity pj\oop1\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\unity pj\oop1\Temp\bin\Debug\Assembly-CSharp.dll
+D:\unity pj\oop1\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\unity pj\oop1\Temp\bin\Debug\nunit.framework.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEditor.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.Analytics.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.HoloLens.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.TestRunner.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.Timeline.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.UI.dll
+D:\unity pj\oop1\Temp\bin\Debug\Mono.Cecil.dll
+D:\unity pj\oop1\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\unity pj\oop1\Temp\bin\Debug\Unity.DataContract.dll
+D:\unity pj\oop1\Temp\bin\Debug\ExCSS.Unity.dll
+D:\unity pj\oop1\Temp\bin\Debug\Unity.Legacy.NRefactory.dll
+D:\unity pj\oop1\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\unity pj\oop1\Temp\bin\Debug\Unity.CecilTools.dll
+D:\unity pj\oop1\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\unity pj\oop1\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.xml
+D:\unity pj\oop1\Temp\bin\Debug\UnityEditor.xml
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.UI.xml
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.TestRunner.xml
+D:\unity pj\oop1\Temp\bin\Debug\nunit.framework.xml
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.Timeline.xml
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.Analytics.xml
+D:\unity pj\oop1\Temp\bin\Debug\UnityEngine.HoloLens.xml
+D:\unity pj\oop1\obj\Debug\Assembly-CSharp.dll
+D:\unity pj\oop1\obj\Debug\Assembly-CSharp.pdb
+E:\unitygames\oop1_v2\Temp\bin\Debug\Assembly-CSharp.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\unitygames\oop1_v2\Temp\bin\Debug\Mono.Data.Sqlite.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\nunit.framework.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\System.Data.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\TextMeshPro-1.0.55.2017.1.0b12.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEditor.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.Analytics.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.HoloLens.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.Networking.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.TestRunner.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.Timeline.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.UI.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Mono.Cecil.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Unity.SerializationLogic.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Unity.DataContract.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\ExCSS.Unity.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Unity.Legacy.NRefactory.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Unity.UNetWeaver.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Unity.CecilTools.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEditor.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.UI.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.Networking.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.TestRunner.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\nunit.framework.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.Timeline.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.Analytics.xml
+E:\unitygames\oop1_v2\Temp\bin\Debug\UnityEngine.HoloLens.xml
+E:\unitygames\oop1_v2\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+E:\unitygames\oop1_v2\obj\Debug\Assembly-CSharp.dll
+E:\unitygames\oop1_v2\obj\Debug\Assembly-CSharp.pdb
