@@ -24,12 +24,16 @@ public class tanka : MonoBehaviour {
     private float nexttime_cannon = 10f;
     private float start_destroy;
     void Start () {
-        point = 0f;maxmana = 100f;blood = 100f;
+        point = 0f;
+        maxmana = 100f;
+        //blood = 100f;
+
         gobj = GameObject.FindGameObjectWithTag("canvas");
         setmaxvalueforslideder("blood", blood);
         setvaluefortslider("blood", blood);
         setmaxvalueforslideder("mana", maxmana);
         setvaluefortslider("mana", 0f);
+
         Fire_GroupRocket = false;
         fullmana = GameObject.FindGameObjectWithTag("thunder");
         fullmana.GetComponent<Animator>().enabled=false;
@@ -39,15 +43,8 @@ public class tanka : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         fire_grouprocket();
-        //if(Time.time>nexttime_cannon)
-        //{
-        //    nexttime_cannon = Time.time + appearrate_cannon;
-        //    if (cannon == null)
-        //    {
-        //        cannon = Instantiate(Cannonenemy, new Vector3(3.53f, -4.1f, 0), Quaternion.identity);
-        //    }
-        //}
         die_tank();
+
         if(lose_game)
         {
             if(Time.time>start_destroy+3f)

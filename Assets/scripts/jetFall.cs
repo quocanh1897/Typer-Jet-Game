@@ -34,7 +34,10 @@ public class jetFall : MonoBehaviour {
     {
         if (jet != null)
         {
+            //jet bay toi tank
             jet.transform.Translate(new Vector3(Time.deltaTime * jetSpeed, 0, 0));
+            
+            //jet toi ben tren tank thi dropBoom
             if (Mathf.Abs(transform.position.x - tfTarget.position.x) < 0.2f && success)
             {
                 success = false;

@@ -101,8 +101,8 @@ MonoBehaviour:
   gunsmoke: {fileID: 1942930558906638, guid: cb541d5f3d84ed6478a7b3a8a33520df, type: 2}
   Cannonenemy: {fileID: 1817318488391070, guid: 80ca6d60eb454a146b937bfaaab3f278,
     type: 2}
-  point: 390
-  blood: 100
+  point: 30
+  blood: 11
   maxmana: 100
   control: {fileID: 0}
   explosion: {fileID: 1669984631793980, guid: 0d79012be659b4c49b26d270c62a5c57, type: 2}

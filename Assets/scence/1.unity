@@ -515,7 +515,7 @@ Prefab:
     - target: {fileID: 114564297989499004, guid: 0cf089205a0137442bcbc8a1296e0978,
         type: 2}
       propertyPath: blood
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 114564297989499004, guid: 0cf089205a0137442bcbc8a1296e0978,
         type: 2}

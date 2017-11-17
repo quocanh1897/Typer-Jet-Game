@@ -192,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1446697186352876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2125669, y: -5.5090814, z: 0}
+  m_LocalPosition: {x: 3.17, y: -3.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4258595641881798}
@@ -218,7 +218,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1242275684351202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.78815, y: 2.1188972, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4163719468377088}
@@ -385,8 +385,8 @@ MonoBehaviour:
   target: {fileID: 1154451049398908, guid: 0cf089205a0137442bcbc8a1296e0978, type: 2}
   firework: {fileID: 1463708651866692, guid: 58faf6516ab265d4a93efbaabaac1b9d, type: 2}
   health: 200
-  speed: 2
-  difficultOfWord: 2
+  speed: 5
+  difficultOfWord: 3
 --- !u!114 &114932683428523984
 MonoBehaviour:
   m_ObjectHideFlags: 1

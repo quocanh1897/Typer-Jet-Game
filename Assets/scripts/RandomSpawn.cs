@@ -21,7 +21,7 @@ public class RandomSpawn : MonoBehaviour {
     // Update is called once per frame
     void Start()
     {
-        winpoint = 200f;
+        winpoint = 300f;
         see_boss = false;
         while_see_boss = false;
         while_danger = false;

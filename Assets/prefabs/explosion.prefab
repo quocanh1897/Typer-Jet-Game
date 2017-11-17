@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4938829588170564}
   - component: {fileID: 212439944430231178}
   - component: {fileID: 95367720789570646}
-  - component: {fileID: 61295538441276428}
   m_Layer: 0
   m_Name: explosion
   m_TagString: Untagged
@@ -42,31 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61295538441276428
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1151779604551188}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.84, y: 0.74}
-    newSize: {x: 0.84, y: 0.74}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.84, y: 0.74}
-  m_EdgeRadius: 0
 --- !u!95 &95367720789570646
 Animator:
   serializedVersion: 3

@@ -18,7 +18,9 @@ public class textHolder : MonoBehaviour
         connectionString = "URI=file:" + Application.dataPath + "/words.db";
         get_difficult_of_word();
         pjCanvas = Canvas.FindObjectOfType<Canvas>();//add canvas vao bien pjCanvas
-        textUI = CreateText(pjCanvas.transform, 12210f, 0f,getWords(diffOfWord), 40, Color.black);//khoi tao dong doi tuong textUI
+
+        //khoi tao dong doi tuong textUI
+        textUI = CreateText(pjCanvas.transform, 12210f, 0f,getWords(diffOfWord), 40, Color.black);
         keyOfJet = textUI;
     }
     void Update()
@@ -29,14 +31,14 @@ public class textHolder : MonoBehaviour
             keyOfJet.transform.position = keyPosition;
         }
     }
-    public string randomText()
-    {
-        string res = "";
-        int row = UnityEngine.Random.Range(0,5);
-        int col= UnityEngine.Random.Range(0,3);
-        access_key_database(row, col, ref res);
-        return res;
-    }
+    //public string randomText()
+    //{
+    //    string res = "";
+    //    int row = UnityEngine.Random.Range(0,5);
+    //    int col= UnityEngine.Random.Range(0,3);
+    //    access_key_database(row, col, ref res);
+    //    return res;
+    //}
     public string getWords(int difficultOfWordIn)//get random word from database
     {
         string res = "";
@@ -46,6 +48,7 @@ public class textHolder : MonoBehaviour
 
             using (IDbCommand dbCmd = dbConnection.CreateCommand())
             {
+                //select 1 row random from table keyOfJet in database
                 int num =UnityEngine.Random.Range(1, 1223);
                 string sqlQuery = "SELECT * from keyOfJet where ID = '" + num + "' ";
                 dbCmd.CommandText = sqlQuery;
@@ -54,8 +57,10 @@ public class textHolder : MonoBehaviour
                 {
                     while (reader.Read())
                     {
+                        //denpend on difficultOfWordIn to choose word 1/2/3 from random row above
                         res = reader.GetString(difficultOfWordIn);
                     }
+                    //close connection
                     dbConnection.Close();
                     reader.Close();
                 }
@@ -79,22 +84,22 @@ public class textHolder : MonoBehaviour
         text.rectTransform.sizeDelta = new Vector2(400, 90);
         return text;
     }
-    public void access_key_database(int row,int col,ref string key)
-    {
-         SqliteConnection sql_con;//bien ket noi database
-         SqliteDataAdapter DB;// chuyen hoa bang database thanh bang trong c# :))
-         DataTable DT = new DataTable();// Bang chua cac tu trong database
-         DataSet DS = new DataSet();// Tap hop cac bang (array cac bang )
-         sql_con = new SqliteConnection("Data Source="+Application.dataPath+"\\dbkey.db;"+"Version=3;New=False;Compress=True");
-         sql_con.Open();
-         string cmd = "SELECT *" + "FROM keytable";// cau lenh truy xuat database
-         DB = new SqliteDataAdapter(cmd, sql_con);// chuyen hoa bang database
-         DS.Clear();
-         DB.Fill(DS);// luu vao dataset
-         DT = DS.Tables[0];
-         sql_con.Close();
-         key = DT.Rows[row][col].ToString();// chon 1 o ngau nhien trong database de lay lam key
-    }
+    //public void access_key_database(int row,int col,ref string key)
+    //{
+    //     SqliteConnection sql_con;//bien ket noi database
+    //     SqliteDataAdapter DB;// chuyen hoa bang database thanh bang trong c# :))
+    //     DataTable DT = new DataTable();// Bang chua cac tu trong database
+    //     DataSet DS = new DataSet();// Tap hop cac bang (array cac bang )
+    //     sql_con = new SqliteConnection("Data Source="+Application.dataPath+"\\dbkey.db;"+"Version=3;New=False;Compress=True");
+    //     sql_con.Open();
+    //     string cmd = "SELECT *" + "FROM keytable";// cau lenh truy xuat database
+    //     DB = new SqliteDataAdapter(cmd, sql_con);// chuyen hoa bang database
+    //     DS.Clear();
+    //     DB.Fill(DS);// luu vao dataset
+    //     DT = DS.Tables[0];
+    //     sql_con.Close();
+    //     key = DT.Rows[row][col].ToString();// chon 1 o ngau nhien trong database de lay lam key
+    //}
 
     void OnDestroy()
     {

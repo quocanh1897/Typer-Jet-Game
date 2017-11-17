@@ -7,7 +7,7 @@ public class bombController : MonoBehaviour
     private Animator anim;
     private GameObject other;
     private Vector3 targetPosition;
-    private float damage;
+    public float damage;
     public GameObject obj;
     public GameObject target;
     public GameObject bombExplose;
@@ -18,7 +18,7 @@ public class bombController : MonoBehaviour
         obj = gameObject;
         anim = obj.GetComponent<Animator>();
         targetPosition = target.GetComponent<Transform>().position;
-        damage = 5f;
+        damage = 20f;
     }
 
     // Update is called once per frame

@@ -39,22 +39,34 @@ public class GameController : MonoBehaviour {
     }
     void Update()
     {
-        input.ActivateInputField();//sau moi lan destroy enemy thi active inputField
-        jet = GameObject.FindGameObjectsWithTag("jet");//lien tuc cap nhat danh sach cac jet
-        foreach (GameObject jetInList in jet)//xet tung jet trong list da cap nhat
+        //sau moi lan destroy enemy thi active inputField
+        input.ActivateInputField();
+
+        //lien tuc cap nhat danh sach cac jet
+        jet = GameObject.FindGameObjectsWithTag("jet");
+
+        //xet tung jet trong list da cap nhat
+        foreach (GameObject jetInList in jet)
         {
-            string t = jetInList.GetComponentInChildren<textHolder>().keyOfJet.text;//lay keyOfJet tao ra tu textHolder cua moi jet
-            if(input.text==t)//truong hop input dung voi keyOfJet
+            //lay keyOfJet tao ra tu textHolder cua moi jet
+            string t = jetInList.GetComponentInChildren<textHolder>().keyOfJet.text;
+
+            //truong hop input dung voi keyOfJet
+            if (input.text == t)
             {
                 input.text = null;
-                if (pos == oldPos)//de cho doi tuong Explose k bi di chuyen theo jet
-                    pos = jetInList.GetComponent<Transform>().position;
-                jetInList.transform.Translate(pos);
+               
                 jetInList.GetComponent<Rigidbody2D>().isKinematic = false;
-                jetExplose(jetInList, pos);//tao doi tuong Explose tu vi tri pos
-                pos = oldPos;
-                jetInList.GetComponent<jetFall>().getPointforplayer();
-                jetInList.GetComponent<jetFall>().getManaforplayer();
+
+                jetInList.GetComponent<jetFall>().jetSpeed = 0f;
+                
+                pos = jetInList.GetComponent<Transform>().position;
+                
+                //tao doi tuong Explose tu vi tri pos
+                jetExplose(jetInList, pos);
+                
+                //jetInList.GetComponent<jetFall>().getPointforplayer();
+                //jetInList.GetComponent<jetFall>().getManaforplayer();
                 jetInList.GetComponent<jetFall>().getshot();
             }
         }
@@ -66,12 +78,16 @@ public class GameController : MonoBehaviour {
             }
         }
     }
-    public void GetInput(string typeString)//player nhap text tu day
+
+    //player nhap text tu day
+    public void GetInput(string typeString)
     {
         inputStringFromPlayer = typeString;
         input.text = null;
     }
-    void jetExplose(GameObject jetInput, Vector3 positionOfExplosion)//khoi tao doi tuong no jet
+
+    //khoi tao doi tuong no jet
+    void jetExplose(GameObject jetInput, Vector3 positionOfExplosion)
     {
         GameObject explose = jetInput.GetComponent<jetFall>().explose;
         Vector3 transPos = positionOfExplosion;
@@ -81,6 +97,7 @@ public class GameController : MonoBehaviour {
         Destroy(textKeyJet, 0f);
         Destroy(explosion, 1f);
     }
+
     public void EndGames()
     {
         Time.timeScale = 0;
@@ -96,6 +113,7 @@ public class GameController : MonoBehaviour {
                 }
         }
     }
+
     public void WinGame()
     {
         Time.timeScale = 0;
@@ -111,6 +129,7 @@ public class GameController : MonoBehaviour {
                 }
            }
     }
+
     public void StartGame()
     {
         panelstart.SetActive(false);
@@ -118,18 +137,21 @@ public class GameController : MonoBehaviour {
         Time.timeScale = 1;
         count_down();
     }
+
     public void RestartGame()
     {
        panelend.SetActive(false);
        SceneManager.LoadScene(1);
        player.GetComponent<tanka>().point = 0f;
     }
+
     public void Startnewgame()
     {
         panelwin.SetActive(false);
         SceneManager.LoadScene(1);
         player.GetComponent<tanka>().point = 0f;
     }
+
     void count_down()
     {
          Countdown = Instantiate(countdown, new Vector3(0, 2.2f, 0), Quaternion.identity);
