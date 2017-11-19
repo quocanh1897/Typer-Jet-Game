@@ -5,11 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameConTroller_scene2 : MonoBehaviour {
-<<<<<<< HEAD
     [SerializeField]
-=======
-
->>>>>>> 07d22c23732375ae99a99380444b0e262277aae8
     // Use this for initialization
     public GameObject nowplayer;
     public GameObject jets;
@@ -29,10 +25,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
     public float start_born_health_rate;
     public float point_see_boss;
     private GameObject Countdown;
-<<<<<<< HEAD
     public InputField input;
-=======
->>>>>>> 07d22c23732375ae99a99380444b0e262277aae8
     private bool isStartGame;
     private GameObject Jets;
     private float start_time_born_jets;
@@ -49,10 +42,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
     private GameObject Firework;
     private GameObject Danger;
     void Start () {
-<<<<<<< HEAD
         input.ActivateInputField();
-=======
->>>>>>> 07d22c23732375ae99a99380444b0e262277aae8
         start_time_born_jets = Time.time;
         start_time_born_health = start_born_health_rate;
         Time.timeScale = 0;
@@ -66,10 +56,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD
         input.ActivateInputField();
-=======
->>>>>>> 07d22c23732375ae99a99380444b0e262277aae8
         if (!start_see_boss)
         {
             if (!isStartGame)

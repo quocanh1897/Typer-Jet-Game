@@ -1548,10 +1548,7 @@ MonoBehaviour:
   start_born_rate: 35
   start_born_health_rate: 30
   point_see_boss: 150
-<<<<<<< HEAD
   input: {fileID: 1779968540}
-=======
->>>>>>> 07d22c23732375ae99a99380444b0e262277aae8
 --- !u!4 &1353107119
 Transform:
   m_ObjectHideFlags: 0
