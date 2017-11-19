@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{64AD9652-BD35-7725-047F-48F9551AED9B}</ProjectGuid>
+    <ProjectGuid>{7056E223-B944-7F6B-F00D-1CE9B20A7FD5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -151,13 +151,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Data.Sqlite">
- <HintPath>E:/unitygames/Typingame_from_git/Typer-Jet-Game/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+ <HintPath>D:/unity pj/OOP/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>E:/unitygames/Typingame_from_git/Typer-Jet-Game/Assets/Plugins/System.Data.dll</HintPath>
+ <HintPath>D:/unity pj/OOP/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.2017.1.0b12">
- <HintPath>E:/unitygames/Typingame_from_git/Typer-Jet-Game/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
+ <HintPath>D:/unity pj/OOP/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
