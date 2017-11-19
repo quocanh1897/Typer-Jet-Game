@@ -18,7 +18,12 @@ public class firstaid : MonoBehaviour {
     {
         if(other.gameObject.tag=="Player")
         {
-            other.gameObject.GetComponent<tanka>().recover(health_recover);
+            if (other.gameObject.GetComponent<tanka>())
+            { other.gameObject.GetComponent<tanka>().recover(health_recover); }
+            else if(other.gameObject.GetComponent<tanka_scene2>())
+            {
+                other.gameObject.GetComponent<tanka_scene2>().recover(health_recover);
+            }
             Destroy(gameObject, 0.1f);
         }
     }
