@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 38a9f084bcc69e04aaecb5800d3c21c8
+timeCreated: 1510810014
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: nuclear_explose_0
+    21300002: nuclear_explose_1
+    21300004: nuclear_explose_2
+    21300006: nuclear_explose_3
+    21300008: nuclear_explose_4
+    21300010: nuclear_explose_5
+    21300012: nuclear_explose_6
+    21300014: nuclear_explose_7
+    21300016: nuclear_explose_8
+    21300018: nuclear_explose_9
+    21300020: nuclear_explose_10
+    21300022: nuclear_explose_11
+    21300024: nuclear_explose_12
+    21300026: nuclear_explose_13
+    21300028: nuclear_explose_14
+    21300030: nuclear_explose_15
+    21300032: nuclear_explose_16
+    21300034: nuclear_explose_17
+    21300036: nuclear_explose_18
+    21300038: nuclear_explose_19
+    21300040: nuclear_explose_20
+    21300042: nuclear_explose_21
+    21300044: nuclear_explose_22
+    21300046: nuclear_explose_23
+    21300048: nuclear_explose_24
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nuclear_explose_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 916
+        width: 88
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_1
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 928
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_2
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 932
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_3
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 922
+        width: 71
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_4
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 922
+        width: 102
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 698
+        width: 132
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_6
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 700
+        width: 139
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_7
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 704
+        width: 145
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_8
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 706
+        width: 163
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_9
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 708
+        width: 179
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_10
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 469
+        width: 194
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_11
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 471
+        width: 200
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_12
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 475
+        width: 202
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_13
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 475
+        width: 220
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_14
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 475
+        width: 241
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 239
+        width: 241
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_16
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 241
+        width: 251
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_17
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 243
+        width: 257
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_18
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 241
+        width: 275
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_19
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 247
+        width: 296
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_20
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 20
+        width: 302
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_21
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 18
+        width: 290
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_22
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 16
+        width: 292
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_23
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 24
+        width: 300
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nuclear_explose_24
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 2
+        width: 308
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

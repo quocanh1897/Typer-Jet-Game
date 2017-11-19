@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7056E223-B944-7F6B-F00D-1CE9B20A7FD5}</ProjectGuid>
+    <ProjectGuid>{64AD9652-BD35-7725-047F-48F9551AED9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,20 +55,28 @@
      <Compile Include="Assets\GameMenu\Scripts\MainCam.cs" />
      <Compile Include="Assets\GameMenu\Scripts\StreamVideo.cs" />
      <Compile Include="Assets\scripts\backgroundmove.cs" />
+     <Compile Include="Assets\scripts\Bomb_Scene2.cs" />
      <Compile Include="Assets\scripts\bombController.cs" />
      <Compile Include="Assets\scripts\bossscene1.cs" />
+     <Compile Include="Assets\scripts\BossScene2.cs" />
      <Compile Include="Assets\scripts\bullet.cs" />
+     <Compile Include="Assets\scripts\Bullet_tank_boss.cs" />
      <Compile Include="Assets\scripts\cannontype.cs" />
      <Compile Include="Assets\scripts\firebulletmove.cs" />
      <Compile Include="Assets\scripts\firstaid.cs" />
      <Compile Include="Assets\scripts\flyplane.cs" />
+     <Compile Include="Assets\scripts\galtigunweapon.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
+     <Compile Include="Assets\scripts\GameConTroller_scene2.cs" />
      <Compile Include="Assets\scripts\jetFall.cs" />
+     <Compile Include="Assets\scripts\jets_scene2.cs" />
      <Compile Include="Assets\scripts\planestream.cs" />
      <Compile Include="Assets\scripts\RandomSpawn.cs" />
      <Compile Include="Assets\scripts\rocket.cs" />
+     <Compile Include="Assets\scripts\smallbullet.cs" />
      <Compile Include="Assets\scripts\smallrocket.cs" />
      <Compile Include="Assets\scripts\tanka.cs" />
+     <Compile Include="Assets\scripts\tanka_scene2.cs" />
      <Compile Include="Assets\scripts\textHolder.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01_UGUI.cs" />
@@ -143,13 +151,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Data.Sqlite">
- <HintPath>D:/unity pj/OOP/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+ <HintPath>E:/unitygames/Typingame_from_git/Typer-Jet-Game/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>D:/unity pj/OOP/Assets/Plugins/System.Data.dll</HintPath>
+ <HintPath>E:/unitygames/Typingame_from_git/Typer-Jet-Game/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.2017.1.0b12">
- <HintPath>D:/unity pj/OOP/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
+ <HintPath>E:/unitygames/Typingame_from_git/Typer-Jet-Game/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
