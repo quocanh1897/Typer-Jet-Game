@@ -52,7 +52,11 @@ VideoClipImporter:
     streamedResource:
       source: library/metadata/25/255f72dd7c5589647b37d6407e51db14.resource
       offset: 0
+<<<<<<< HEAD
       size: 8310314
+=======
+      size: 8313037
+>>>>>>> 07d22c23732375ae99a99380444b0e262277aae8
   userData: 
   assetBundleName: 
   assetBundleVariant: 
