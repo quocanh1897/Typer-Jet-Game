@@ -3,29 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - jet
-  - textattack
-  - canvas
-  - blood
-  - point
-  - mana
-  - warhead
-  - thunder
-  - totalpoint
-  - Textshowwin
-  - bomb
-  - rocket
-  - bloodboss
-  - bossscene
-<<<<<<< HEAD
-  - Bossscene2
-  - smallbullet
-  - galtigun
-  - shield
-=======
-  - MissilesBtnText
->>>>>>> e39a472f8f03b7c05cad3af00f716f20f5b14c83
+  tags: []
   layers:
   - Default
   - TransparentFX

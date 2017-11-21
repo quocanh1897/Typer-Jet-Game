@@ -1,21 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
-    <ProjectGuid>{64AD9652-BD35-7725-047F-48F9551AED9B}</ProjectGuid>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{7056E223-B944-7F6B-F00D-1CE9B20A7FD5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -29,7 +27,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,7 +36,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,10 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
      <Compile Include="Assets\GameMenu\Scripts\ButtonManager.cs" />
      <Compile Include="Assets\GameMenu\Scripts\MainCam.cs" />
-     <Compile Include="Assets\GameMenu\Scripts\StreamVideo.cs" />
+     <Compile Include="Assets\GameMenu\Scripts\StreamVideoInstructions.cs" />
+     <Compile Include="Assets\GameMenu\Scripts\StreamVideoSettings.cs" />
      <Compile Include="Assets\scripts\backgroundmove.cs" />
      <Compile Include="Assets\scripts\Bomb_Scene2.cs" />
      <Compile Include="Assets\scripts\bombController.cs" />
@@ -165,116 +161,6 @@
  <Reference Include="TextMeshPro-1.0.55.2017.1.0b12">
  <HintPath>D:/unity pj/OOP/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
  </Reference>
-=======
-    <Compile Include="Assets\GameMenu\Scripts\ButtonManager.cs" />
-    <Compile Include="Assets\GameMenu\Scripts\MainCam.cs" />
-    <Compile Include="Assets\GameMenu\Scripts\StreamVideo.cs" />
-    <Compile Include="Assets\scripts\backgroundmove.cs" />
-    <Compile Include="Assets\scripts\Bomb_Scene2.cs" />
-    <Compile Include="Assets\scripts\bombController.cs" />
-    <Compile Include="Assets\scripts\bossscene1.cs" />
-    <Compile Include="Assets\scripts\BossScene2.cs" />
-    <Compile Include="Assets\scripts\bullet.cs" />
-    <Compile Include="Assets\scripts\Bullet_tank_boss.cs" />
-    <Compile Include="Assets\scripts\cannontype.cs" />
-    <Compile Include="Assets\scripts\firebulletmove.cs" />
-    <Compile Include="Assets\scripts\firstaid.cs" />
-    <Compile Include="Assets\scripts\flyplane.cs" />
-    <Compile Include="Assets\scripts\galtigunweapon.cs" />
-    <Compile Include="Assets\scripts\GameController.cs" />
-    <Compile Include="Assets\scripts\GameConTroller_scene2.cs" />
-    <Compile Include="Assets\scripts\jetFall.cs" />
-    <Compile Include="Assets\scripts\jets_scene2.cs" />
-    <Compile Include="Assets\scripts\planestream.cs" />
-    <Compile Include="Assets\scripts\RandomSpawn.cs" />
-    <Compile Include="Assets\scripts\rocket.cs" />
-    <Compile Include="Assets\scripts\smallbullet.cs" />
-    <Compile Include="Assets\scripts\smallrocket.cs" />
-    <Compile Include="Assets\scripts\tanka.cs" />
-    <Compile Include="Assets\scripts\tanka_scene2.cs" />
-    <Compile Include="Assets\scripts\textHolder.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01_UGUI.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark02.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark03.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark04.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\CameraController.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\ChatController.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\EnvMapAnimator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\ObjectSpin.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\ShaderPropAnimator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\SkewTextExample.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TeleType.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TextConsoleSimulator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TextMeshProFloatingText.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TextMeshSpawner.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_DigitValidator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_ExampleScript_01.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_FrameRateCounter.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextEventHandler.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextSelector_A.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_TextSelector_B.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMP_UiFrameRateCounter.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\TMPro_InstructionOverlay.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexColorCycler.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexJitter.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexShakeA.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\VertexZoom.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples\Scripts\WarpTextExample.cs" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\Anton OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Fonts\Oswald-Bold - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Fonts\Bangers - OFL.txt" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Timeline">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Data.Sqlite">
-      <HintPath>E:/unitygames/Typinggame_from_git_v1/Typer-Jet-Game/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>E:/unitygames/Typinggame_from_git_v1/Typer-Jet-Game/Assets/Plugins/System.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="TextMeshPro-1.0.55.2017.1.0b12">
-      <HintPath>E:/unitygames/Typinggame_from_git_v1/Typer-Jet-Game/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
-    </Reference>
->>>>>>> e39a472f8f03b7c05cad3af00f716f20f5b14c83
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -284,4 +170,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>
