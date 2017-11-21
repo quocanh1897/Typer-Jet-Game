@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class StreamVideo : MonoBehaviour {
+public class StreamVideoInstructions : MonoBehaviour
+{
     public RawImage image;
     public VideoClip videoToPlay;
     private VideoPlayer videoPlayer;
@@ -47,7 +48,8 @@ public class StreamVideo : MonoBehaviour {
         //videoPlayer.SetTargetAudioSource(0, audioSource);
 
         //Set video To Play then prepare Audio to prevent Buffering
-        videoPlayer.playbackSpeed = 2.5f;
+        //videoPlayer.playbackSpeed = 2f;
+        videoPlayer.isLooping = true;
         videoPlayer.clip = videoToPlay;
         videoPlayer.Prepare();
         //Wait until video is prepared
@@ -70,10 +72,11 @@ public class StreamVideo : MonoBehaviour {
         }
         Debug.Log("Done Playing Video");
     }
-    void Update () {
-        if (ButtonManager.MainToSettingsOn)
+    void Update()
+    {
+        if (ButtonManager.MainToInstructionsOn)
             PlayBackgroundVideo();
-        if (ButtonManager.SettingsToMainOn)
+        if (ButtonManager.InstructionsToMainOn)
             videoPlayer.Pause();
-	}
+    }
 }

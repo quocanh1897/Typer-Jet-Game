@@ -18,6 +18,7 @@ TagManager:
   - rocket
   - bloodboss
   - bossscene
+  - MissilesBtnText
   layers:
   - Default
   - TransparentFX
