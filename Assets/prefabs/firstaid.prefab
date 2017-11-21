@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -99,8 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ab1331a55e6c84db9b1c81fe01cc46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  where_scene: 0
   showheart: {fileID: 198530920190876292, guid: 42973c796bc964447b8097b9ba37b4e2,
     type: 2}
+  oj: {fileID: 1625552001912008}
+  target: {fileID: 1154451049398908, guid: 0cf089205a0137442bcbc8a1296e0978, type: 2}
 --- !u!212 &212272880754771066
 SpriteRenderer:
   m_ObjectHideFlags: 1
