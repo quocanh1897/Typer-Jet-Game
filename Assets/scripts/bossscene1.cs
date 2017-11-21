@@ -68,20 +68,27 @@ public class bossscene1 : MonoBehaviour {
             }
             if (attack)
             {
-                
+				//SoundController.PlaySound(soundsGame.dailien);
                 make_oscillate();
                 GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().loseheart(damage_stream);
                 fire_rocket();
+				//SoundController.PlaySound(soundsGame.bomno);
                 change_text();
+				//SoundController.PlaySound(soundsGame.bomno);
                 die_boss();
             }
         }
+
+
         if(fire_work)
         {
+			
             if(Time.time>=start_firework+7f)
             {
+				//SoundController.PlaySound(soundsGame.dailien);
                 Destroy(Firework, 0.01f);fire_work = false;
                 Destroy(gameObject, 0.01f);
+				SoundController.PlaySound(soundsGame.bomno);
             }
         }
     }
@@ -100,7 +107,8 @@ public class bossscene1 : MonoBehaviour {
         InputField attack = InputField.FindObjectOfType<InputField>();
         if (attack.text==key)
         {
-            show_effect_explosion();
+			SoundController.PlaySound(soundsGame.bomno);
+			show_effect_explosion();
             loseheart(50);
             key = textholder.GetComponent<textHolder>().getWords(difficultOfWord);
             textholder.GetComponent<textHolder>().textUI.text = key;
@@ -125,12 +133,15 @@ public class bossscene1 : MonoBehaviour {
     {
         if(Time.time>=start_time_rocket)
         {
+			SoundController.PlaySound(soundsGame.bomno);
+			SoundController.PlaySound(soundsGame.dailien1);
             GameObject Rocket = Instantiate(rocket, new Vector3(4.07f, 1.32f, 0), Quaternion.identity);
             start_time_rocket = Time.time + time_rate_fire_rocket;
         }
     }
     void show_firework()
     {
+		////SoundController.PlaySound(soundsGame.dailien);
         if (!fire_work)
         {
             Firework = Instantiate(firework, new Vector3(0, -3f, 0), Quaternion.identity);

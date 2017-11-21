@@ -63,19 +63,22 @@ public class jets_scene2 : MonoBehaviour {
     {
         Collider2D cld = gameObject.GetComponent<Collider2D>();
         cld.isTrigger = true;
+		SoundController_2.PlaySound_2(soundsGame_2.dropbom_2);
         GameObject Weapon = Instantiate(weapon, transform.position, Quaternion.identity);
     }
     void Drop_Boom_Cluster() //Ham tha boom chum
     {
         if(Time.time>=start_time_drop_boom) //Dieu kien nay lam cho boom chum tha ra cu 0.5s 1 qua
         {
+			SoundController_2.PlaySound_2(soundsGame_2.dropbomnhanh);
             Drop_Boom();
             start_time_drop_boom = Time.time + 0.5f;
         }
     }
     void OnDestroy() //Ham trong giai doan huy may bay: tinh diem, lay mana,...
     {
-        if (GameObject.FindGameObjectWithTag("Player"))
+		SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
+		if (GameObject.FindGameObjectWithTag("Player"))
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<tanka_scene2>().get_mana(mana);
             GameObject.FindGameObjectWithTag("Player").GetComponent<tanka_scene2>().get_point(point);
@@ -90,7 +93,8 @@ public class jets_scene2 : MonoBehaviour {
         cld.isTrigger = true;
         if (Time.time >= start_time_fire_rocket) //Dieu kien nay de xac dinh cu 1s la se co 1 rocket bay ra
         {
-            GameObject Rocket = Instantiate(rocket, transform.position, Quaternion.identity);
+			SoundController_2.PlaySound_2(soundsGame_2.dropbomnhanh);
+			GameObject Rocket = Instantiate(rocket, transform.position, Quaternion.identity);
             start_time_fire_rocket = Time.time + 1f;
         }
     }

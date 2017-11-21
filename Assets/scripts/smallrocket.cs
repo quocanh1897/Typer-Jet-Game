@@ -36,6 +36,7 @@ public class smallrocket : MonoBehaviour {
     void OnDestroy()
     {
         GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
+		SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
         Destroy(exp, 0.2f);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class firstaid : MonoBehaviour {
 
     // Use this for initialization
+	public int where_scene;
     private float health_recover = 20f;
     public ParticleSystem showheart;
     void Start() {
@@ -29,7 +30,8 @@ public class firstaid : MonoBehaviour {
     }
     void OnDestroy()
     {
-        ParticleSystem heart = Instantiate(showheart, transform.position, Quaternion.identity);
+		SoundController.PlaySound(soundsGame.heal);
+		ParticleSystem heart = Instantiate(showheart, transform.position, Quaternion.identity);
         Destroy(heart, 1f);
     }
 }

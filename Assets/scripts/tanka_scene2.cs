@@ -95,7 +95,8 @@ public class tanka_scene2 : MonoBehaviour {
     {
         if(!isLoseGame)
         {
-            GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
+			SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
+			GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(exp, 5f);
             start_time_explose = Time.time; isLoseGame = true; //Thiet lap moc thoi gian de tinh thoi gian huy hieu ung no
         }

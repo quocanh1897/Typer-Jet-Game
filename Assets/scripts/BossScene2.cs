@@ -69,14 +69,17 @@ public class BossScene2 : MonoBehaviour {
     }
     void show_effect_explosion() //Hieu ung no tai boss
     {
-        GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
+		SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
+		GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(exp, 0.5f);
     }
     void fire_bullet() //Ban 1 vien dan tai nong sung ria cua boss, moi giay ban 1 vien 
     {
         if(Time.time>start_time_bullet)
         {
-            GameObject Bullet = Instantiate(bullet, new Vector3(4.34f, -2.32f, 0), Quaternion.identity);
+            //////////////////////////////////////ban dai bac
+			//SoundController_2.PlaySound_2(soundsGame_2.galting);
+			GameObject Bullet = Instantiate(bullet, new Vector3(4.34f, -2.32f, 0), Quaternion.identity);
             start_time_bullet = Time.time + 1; //moi giay ban 1 vien 
             GameObject Shooting_effect = Instantiate(shooting_effect, new Vector3(4.14f, -2.36f, 0), Quaternion.Euler(0,0,75));
             Destroy(Shooting_effect, 0.5f);
@@ -86,7 +89,9 @@ public class BossScene2 : MonoBehaviour {
     {
         if (Time.time >= start_time_smallbullet)
         {
-            GameObject Smallbullet = Instantiate(small_bullet, new Vector3(4.53f, -3.15f, 0), Quaternion.Euler(0, 0, 90));
+            ///////////////////////////////////////////////ban dien
+			SoundController_2.PlaySound_2(soundsGame_2.electricban);
+			GameObject Smallbullet = Instantiate(small_bullet, new Vector3(4.53f, -3.15f, 0), Quaternion.Euler(0, 0, 90));
             start_time_smallbullet = Time.time + 0.5f; //cu 0.5 giay ban 1 vien
         }
     }
