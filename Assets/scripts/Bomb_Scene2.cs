@@ -9,7 +9,7 @@ public class Bomb_Scene2 : MonoBehaviour {
     private float damage;
     private float mana;
     private float moveSpeed;
-    public int type_boom;
+    public int type_boom; //Bien nay xac dinh boom tha ra la boom, do minh quyet dinh, hien gio co 2 loai: boom thuong, boom nguyen tu
 	void Start () {
         mana = 20f;
         moveSpeed = 5f;
@@ -18,14 +18,14 @@ public class Bomb_Scene2 : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-        if (type_boom == 0)
+        if (type_boom == 0) //Neu la may bay cho boom thuong => roi binh thuong
         { transform.Translate(new Vector3(0, -1 * Time.deltaTime * moveSpeed, 0)); }
-        if(type_boom==1)
+        if(type_boom==1) //Neu la may bay cho boom nguyen tu => roi cham
         {
           transform.Translate(new Vector3(0, -1 * Time.deltaTime * 2, 0));
         }
     }
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other) //Va cham voi Player thi mat mau Player va no
     {
         if(other.gameObject.tag=="Player")
         {
@@ -38,12 +38,12 @@ public class Bomb_Scene2 : MonoBehaviour {
     {
         if (type_boom == 0)
         {
-            GameObject exp = Instantiate(explose, transform.position, Quaternion.identity);
+            GameObject exp = Instantiate(explose, transform.position, Quaternion.identity); //Neu la boom thuong => Hieu ung no thuong
             Destroy(exp, 1f);
         }
         else if(type_boom==1)
         {
-            GameObject exp = Instantiate(explose, new Vector3(transform.position.x,transform.position.y-0.5f,transform.position.z), Quaternion.identity);
+            GameObject exp = Instantiate(explose, new Vector3(transform.position.x,transform.position.y-0.5f,transform.position.z), Quaternion.identity); //Neu la boom nguyen tu => hieu ung no cua boom nguyen tu
             Destroy(exp, 2.9f);
         }
     }

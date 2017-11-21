@@ -13,6 +13,7 @@ public class firebulletmove : MonoBehaviour {
     private float direction;
     private Transform trs;
 	void Start () {
+        // Script nay dung de lam cho hieu ung lua khi Boss_Scene_1 xuat hien tinh tien xung quanh xe tang, no giong giong nhu galtingun quay trong scene2
         oldposition = target.transform.position.x;
         trs = gameObject.GetComponent<Transform>();
         transform.position = new Vector3(target.transform.position.x, target.transform.position.y, target.transform.position.z);

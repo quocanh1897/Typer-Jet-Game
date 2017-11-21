@@ -30,7 +30,8 @@ public class RandomSpawn : MonoBehaviour {
     {
         if ((Time.time > nextSpawn)&&!see_boss)
         {
-            whatToSpawn = Random.Range(1, 8); //random jet 1 - jet 5
+            //whatToSpawn = 6;
+            whatToSpawn = Random.Range(5,7); //random jet 1 - jet 5
             switch (whatToSpawn)
             {
                 case 1:

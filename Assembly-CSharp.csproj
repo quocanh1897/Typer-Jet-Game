@@ -73,6 +73,7 @@
      <Compile Include="Assets\scripts\planestream.cs" />
      <Compile Include="Assets\scripts\RandomSpawn.cs" />
      <Compile Include="Assets\scripts\rocket.cs" />
+     <Compile Include="Assets\scripts\shield_controller.cs" />
      <Compile Include="Assets\scripts\smallbullet.cs" />
      <Compile Include="Assets\scripts\smallrocket.cs" />
      <Compile Include="Assets\scripts\tanka.cs" />

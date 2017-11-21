@@ -9,8 +9,12 @@ public class tanka : MonoBehaviour {
     public GameObject grouprocket;
     public GameObject gunsmoke;
     public GameObject Cannonenemy;
+    public GameObject shield;
+    public GameObject shield_dmg;
     private GameObject cannon;
     private GameObject fullmana;
+    private GameObject shield1;
+    private GameObject shield2;
     public float point;
     public float blood;
     public float maxmana;
@@ -21,13 +25,14 @@ public class tanka : MonoBehaviour {
     private bool Fire_GroupRocket;
     private bool lose_game;
     private float appearrate_cannon=10f;
-    private float nexttime_cannon = 10f;
+    public bool isprotect;
+    public bool isdmging;
+    //private float nexttime_cannon = 10f;
     private float start_destroy;
     void Start () {
         point = 0f;
         maxmana = 100f;
         //blood = 100f;
-
         gobj = GameObject.FindGameObjectWithTag("canvas");
         setmaxvalueforslideder("blood", blood);
         setvaluefortslider("blood", blood);
@@ -38,7 +43,9 @@ public class tanka : MonoBehaviour {
         fullmana = GameObject.FindGameObjectWithTag("thunder");
         fullmana.GetComponent<Animator>().enabled=false;
         cannon = null;
+        isprotect = false;
         lose_game = false;
+        isdmging = false;
     }
 	// Update is called once per frame
 	void Update () {
@@ -158,4 +165,20 @@ public class tanka : MonoBehaviour {
             start_destroy = Time.time;lose_game = true;
         }
     }
+    public void create_shield()
+    {
+        isprotect = true;
+        shield1 = Instantiate(shield, transform.position, Quaternion.identity);
+    }
+    public void create_shield_dmg()
+    {
+        isprotect = true;
+        shield2 = Instantiate(shield_dmg, transform.position, Quaternion.identity);
+    }
+    public void destroy_shields()
+    {
+        Destroy(shield1, 0);
+        Destroy(shield2, 0);
+    }
+    
 }

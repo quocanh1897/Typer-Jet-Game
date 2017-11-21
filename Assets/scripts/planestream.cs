@@ -9,6 +9,7 @@ public class planestream : MonoBehaviour
     public GameObject explose;
     private GameObject target;
     public GameObject textHolder;
+    public GameObject shooting_shield_effect;
     private GameObject obj;
 
     private float point = 50f;
@@ -21,6 +22,15 @@ public class planestream : MonoBehaviour
     void Update()
     {
         target = GameObject.FindGameObjectWithTag("Player");
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isprotect &&
+            !GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isdmging)
+        {
+            Debug.Log("ahihi");
+            shooting_shield_effect.SetActive(false);
+            target.GetComponent<tanka>().create_shield_dmg();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isdmging = true;
+            damage = 0;
+        }
         if (target != null)
         {
             target.GetComponent<tanka>().loseheart(damage);

@@ -18,6 +18,10 @@ TagManager:
   - rocket
   - bloodboss
   - bossscene
+  - Bossscene2
+  - smallbullet
+  - galtigun
+  - shield
   layers:
   - Default
   - TransparentFX
