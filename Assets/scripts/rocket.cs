@@ -75,6 +75,7 @@ public class rocket : MonoBehaviour
     }
     void OnDestroy()
     {
+		//SoundController.PlaySound(soundsGame.bomno);
         GameObject gobj = Instantiate(explose, transform.position, Quaternion.identity);
         Destroy(gobj, 1f);
     }

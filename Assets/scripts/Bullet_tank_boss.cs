@@ -30,7 +30,9 @@ public class Bullet_tank_boss : MonoBehaviour
     {
         if(other.gameObject.tag=="Player")
         {
-            other.gameObject.GetComponent<tanka_scene2>().lose_heart(damage);
+            ///////////////////////////////////////////////////trung dan dien
+			SoundController_2.PlaySound_2(soundsGame_2.electricnhan);
+			other.gameObject.GetComponent<tanka_scene2>().lose_heart(damage);
             Destroy(gameObject, 0.01f);
         }
     }

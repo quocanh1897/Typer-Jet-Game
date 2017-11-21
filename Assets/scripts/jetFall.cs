@@ -11,7 +11,6 @@ public class jetFall : MonoBehaviour {
     public GameObject target;
     public int difficultOfWord;
     Transform tfTarget;
-
     private bool success;
     private float oldPosition;
     private float point = 0f;
@@ -50,7 +49,9 @@ public class jetFall : MonoBehaviour {
     {
         Collider2D cld = gameObject.GetComponent<Collider2D>();
         cld.isTrigger = true;
-        Instantiate(weapon, transform.position, Quaternion.identity);
+		SoundController.PlaySound (soundsGame.dropbom);
+		Debug.Log("ahihi");
+		Instantiate(weapon, transform.position, Quaternion.identity);
     }
     public void getPointforplayer()
     {
@@ -79,8 +80,8 @@ public class jetFall : MonoBehaviour {
     }
     void OnDestroy()
     {
-        getManaforplayer();
-        getPointforplayer();
+        //getManaforplayer();
+        //getPointforplayer();
         InputField.FindObjectOfType<InputField>().text = null;
         Vector3 transPos = transform.position;
         GameObject explosion = Instantiate(explose, transPos, Quaternion.identity);

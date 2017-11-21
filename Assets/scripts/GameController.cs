@@ -25,8 +25,10 @@ public class GameController : MonoBehaviour {
     public GameObject player;
     public GameObject countdown;
     public GameObject randomjet;
+	private string oldText;
     void Start()
     {
+		oldText = input.text;
         input.ActivateInputField();//dau nhap input duoc active ngay sau start game
         Time.timeScale = 0;
         oldPos = new Vector3(0, 0, 0);
@@ -45,10 +47,17 @@ public class GameController : MonoBehaviour {
         //lien tuc cap nhat danh sach cac jet
         jet = GameObject.FindGameObjectsWithTag("jet");
 
+		if (input.text != oldText) 
+		{
+			SoundController.PlaySound(soundsGame.eat);
+			Debug.Log ("kkkkk");
+			oldText = input.text;
+		}
         //xet tung jet trong list da cap nhat
         foreach (GameObject jetInList in jet)
         {
             //lay keyOfJet tao ra tu textHolder cua moi jet
+
             string t = jetInList.GetComponentInChildren<textHolder>().keyOfJet.text;
 
             //truong hop input dung voi keyOfJet
@@ -64,14 +73,18 @@ public class GameController : MonoBehaviour {
                 
                 //tao doi tuong Explose tu vi tri pos
                 jetExplose(jetInList, pos);
+				SoundController.PlaySound(soundsGame.bomno);
                 
                 //jetInList.GetComponent<jetFall>().getPointforplayer();
                 //jetInList.GetComponent<jetFall>().getManaforplayer();
                 jetInList.GetComponent<jetFall>().getshot();
+				jetInList.GetComponent<jetFall> ().getManaforplayer ();
+				jetInList.GetComponent<jetFall> ().getPointforplayer();
             }
         }
         if(Countdown!=null&&isstartgames)
         {
+			
             if(Time.time>time_start_game+4f)
             {
                 Destroy(Countdown, 0.01f);isstartgames = false;randomjet.SetActive(true);
@@ -82,6 +95,7 @@ public class GameController : MonoBehaviour {
     //player nhap text tu day
     public void GetInput(string typeString)
     {
+
         inputStringFromPlayer = typeString;
         input.text = null;
     }
@@ -136,6 +150,7 @@ public class GameController : MonoBehaviour {
         player.GetComponent<tanka>().point = 0f;
         Time.timeScale = 1;
         count_down();
+		SoundController.PlaySound(soundsGame.ready);
     }
 
     public void RestartGame()

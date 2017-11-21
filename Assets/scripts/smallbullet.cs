@@ -16,8 +16,8 @@ public class smallbullet : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         rb.AddForce((transform.position - source_gun.GetComponent<Transform>().position) * (-1) * speed, ForceMode2D.Impulse); //Ham nay dung de tao luc cho vien dan bay theo huong cua dau dan (huong cua Player)
-        if (type_bullet == 0) //Bang 0 la dan cua galtingun se bi huy sau 1 luc de tranh tran bo nho, nguoc lai la dan cua Boss_scene_2
-        { Destroy(gameObject, 1.5f); }
+         //Bang 0 la dan cua galtingun se bi huy sau 1 luc de tranh tran bo nho, nguoc lai la dan cua Boss_scene_2
+		Destroy(gameObject, 1.5f);
         speed = 100f;
     }
 
@@ -41,7 +41,9 @@ public class smallbullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject, 0.01f);
+            ////////////////////////////////////////////////nong tieu lien
+			//SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
+			Destroy(gameObject, 0.01f);
             other.gameObject.GetComponent<tanka_scene2>().lose_heart(damage);
         }
     }

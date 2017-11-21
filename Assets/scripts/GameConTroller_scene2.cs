@@ -41,7 +41,9 @@ public class GameConTroller_scene2 : MonoBehaviour {
     private GameObject Boss;
     private GameObject Firework;
     private GameObject Danger;
+	private string oldText;
     void Start () {
+		oldText = input.text;
         input.ActivateInputField();
         start_time_born_jets = Time.time;
         start_time_born_health = start_born_health_rate;
@@ -57,6 +59,13 @@ public class GameConTroller_scene2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         input.ActivateInputField();
+		if (input.text != oldText) 
+		{
+			SoundController_2.PlaySound_2(soundsGame_2.eat_2);
+
+			oldText = input.text;
+		}
+
         if (!start_see_boss) //Trang thai nay la chua gap boss
         {
             if (!isStartGame) //Trang thai da qua giai doan bat dau game, sinh ra 1 top may bay va may bay mau
@@ -99,6 +108,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
                 Destroy(Boss, 0.01f); //Huy Boss
                 Win_game();
             }
+			SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
         }
         check_see_boss();
     }
@@ -107,9 +117,11 @@ public class GameConTroller_scene2 : MonoBehaviour {
         Panel_start.SetActive(false);
         Time.timeScale = 1;
         Count_down(); 
+
     }
     void Count_down() //Ham nay dung de dem nguoc thoi gian 3-2-1-Go xong may bay moi ra
     {
+		SoundController_2.PlaySound_2(soundsGame_2.ready_2);
         Countdown = Instantiate(countdown, new Vector3(0, 2.2f, 0), Quaternion.identity);
         time_start_game = Time.time; //Gan vao thoi gian cua game de do thoi gian xuat hien hieu ung Countdown
     }
@@ -146,6 +158,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
             {
                 Destroy(jet, 0.01f);
             }
+			SoundController_2.PlaySound_2(soundsGame_2.danger_2);
             Danger = Instantiate(danger, new Vector3(0, 1.8f, 0), Quaternion.identity); //Xuat hieu ung Danger
             start_time_danger = Time.time; //Do thoi gian de huy hieu ung danger
             isseeboss = true; //Thiet lap trang thai "da gap boss"
@@ -190,6 +203,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
         if(!fire_work) //Bien nay chac chan rang phao hoa chi tao ra 1 lan 
         {
             Firework = Instantiate(firework, new Vector3(0, -3f, 0), Quaternion.identity);
+
             start_fire_work = Time.time; fire_work = true; //Xac dinh moc thoi gian de phao hoa bi destroy
             win_game = true;
             Boss.GetComponent<BossScene2>().at_die();

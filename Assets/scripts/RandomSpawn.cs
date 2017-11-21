@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomSpawn : MonoBehaviour {
 
-    public GameObject enemy1, enemy2, enemy3, enemy4, enemy5,enemy6,health7,armor;
+    public GameObject enemy1, enemy2, enemy3, enemy4, enemy5,enemy6,health7;
     public GameObject boss;
     public GameObject player;
     public GameObject bloodboss;
@@ -30,8 +30,7 @@ public class RandomSpawn : MonoBehaviour {
     {
         if ((Time.time > nextSpawn)&&!see_boss)
         {
-            //whatToSpawn = 6;
-            whatToSpawn = Random.Range(1,8); //random jet 1 - jet 5
+            whatToSpawn = Random.Range(1, 8); //random jet 1 - jet 5
             switch (whatToSpawn)
             {
                 case 1:
@@ -54,9 +53,6 @@ public class RandomSpawn : MonoBehaviour {
                     break;
                 case 7:
                     Instantiate(health7, transform.position, Quaternion.identity);
-                    break;
-                case 8:
-                    Instantiate(armor, transform.position, Quaternion.identity);
                     break;
             }
             //set next spawn time
@@ -95,6 +91,7 @@ public class RandomSpawn : MonoBehaviour {
             {
                 Destroy(Jet, 0.2f);
             }
+			SoundController.PlaySound(soundsGame.danger);
             Danger = Instantiate(danger, new Vector3(0, 1.8f, 0), Quaternion.identity);
             start_danger = Time.time;
             while_danger = true;

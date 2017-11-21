@@ -38,11 +38,14 @@ public class Bomb_Scene2 : MonoBehaviour {
     {
         if (type_boom == 0)
         {
-            GameObject exp = Instantiate(explose, transform.position, Quaternion.identity); //Neu la boom thuong => Hieu ung no thuong
+            //no bom thuong
+			SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
+			GameObject exp = Instantiate(explose, transform.position, Quaternion.identity); //Neu la boom thuong => Hieu ung no thuong
             Destroy(exp, 1f);
         }
         else if(type_boom==1)
         {
+			SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
             GameObject exp = Instantiate(explose, new Vector3(transform.position.x,transform.position.y-0.5f,transform.position.z), Quaternion.identity); //Neu la boom nguyen tu => hieu ung no cua boom nguyen tu
             Destroy(exp, 2.9f);
         }

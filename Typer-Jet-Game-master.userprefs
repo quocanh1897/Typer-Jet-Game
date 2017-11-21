@@ -1,0 +1,37 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\galtigunweapon.cs">
+    <Files>
+      <File FileName="Assets\SoundController.cs" Line="54" Column="8" />
+      <File FileName="Assets\scripts\bombController.cs" Line="34" Column="48" />
+      <File FileName="Assets\scripts\bossscene1.cs" Line="91" Column="49" />
+      <File FileName="Assets\scripts\GameController.cs" Line="31" Column="24" />
+      <File FileName="Assets\scripts\jetFall.cs" Line="52" Column="3" />
+      <File FileName="Assets\scripts\planestream.cs" Line="37" Column="37" />
+      <File FileName="Assets\scripts\rocket.cs" Line="64" Column="1" />
+      <File FileName="Assets\scripts\backgroundmove.cs" Line="13" Column="25" />
+      <File FileName="Assets\scripts\Bomb_Scene2.cs" Line="29" Column="6" />
+      <File FileName="Assets\scripts\bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Bullet_tank_boss.cs" Line="34" Column="50" />
+      <File FileName="Assets\scripts\cannontype.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\firebulletmove.cs" Line="27" Column="45" />
+      <File FileName="Assets\scripts\firstaid.cs" Line="8" Column="25" />
+      <File FileName="Assets\scripts\flyplane.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\galtigunweapon.cs" Line="62" Column="53" />
+      <File FileName="Assets\scripts\RandomSpawn.cs" Line="94" Column="42" />
+      <File FileName="Assets\scripts\smallbullet.cs" Line="21" Column="22" />
+      <File FileName="Assets\scripts\smallrocket.cs" Line="39" Column="58" />
+      <File FileName="Assets\scripts\tanka.cs" Line="127" Column="5" />
+      <File FileName="Assets\scripts\tanka_scene2.cs" Line="98" Column="59" />
+      <File FileName="Assets\scripts\textHolder.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\GameConTroller_scene2.cs" Line="111" Column="4" />
+      <File FileName="Assets\scripts\BossScene2.cs" Line="110" Column="36" />
+      <File FileName="Assets\SoundController_2.cs" Line="127" Column="36" />
+      <File FileName="Assets\scripts\jets_scene2.cs" Line="66" Column="57" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
