@@ -38,7 +38,7 @@ public class bossscene1 : MonoBehaviour {
     void Start () {
         damage_rocket = 10f;
         damage_stream = 0.1f;
-        health = 200f;
+        health = 50f;
         point = 500f;
         speed_high = 5f;
         point_one = 50f;
