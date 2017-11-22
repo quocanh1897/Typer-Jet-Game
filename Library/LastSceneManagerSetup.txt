@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: D:/unity pj/OOP/Assets/GameMenu/Scenes/GameMenu.unity
+=======
+- path: Assets/GameMenu/Scenes/GameMenu.unity
+>>>>>>> c607a5ed36adb227bf1642d566426b217ae5ab25
   isLoaded: 1
   isActive: 1
