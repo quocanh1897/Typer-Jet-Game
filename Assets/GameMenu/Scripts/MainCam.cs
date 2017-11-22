@@ -11,10 +11,24 @@ public class MainCam : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+        myAnim.SetBool("MainToInstructionsOn", false);
+        myAnim.SetBool("InstructionsToMainOn", false);
         myAnim.SetBool("MainToHSOn", false);
         myAnim.SetBool("HSToMainOn", false);
         myAnim.SetBool("MainToSettingsOn", false);
         myAnim.SetBool("SettingsToMainOn", false);
+        if (ButtonManager.MainToInstructionsOn)
+        {
+            myAnim.SetBool("MainToInstructionsOn", true);
+            ButtonManager.MainToInstructionsOn = false;
+            return;
+        }
+        if (ButtonManager.InstructionsToMainOn)
+        {
+            myAnim.SetBool("InstructionsToMainOn", true);
+            ButtonManager.InstructionsToMainOn = false;
+            return;
+        }
         if (ButtonManager.MainToHSOn)
         {
             myAnim.SetBool("MainToHSOn", true);
