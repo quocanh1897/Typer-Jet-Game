@@ -50,6 +50,7 @@ public class tanka : MonoBehaviour {
         fullmana.GetComponent<Animator>().enabled=false;
         //cannon = null;
         lose_game = false;
+        isdmging = false;
     }
 	// Update is called once per frame
 	void Update () {

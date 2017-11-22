@@ -35,6 +35,15 @@ public class bombController : MonoBehaviour
             Destroy(Instantiate(bombExplose, targetPosition, Quaternion.identity),0.5f);//huy bomb sau 0.5s
         }
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "shield")
+        {
+            Destroy(gameObject, 0f);
+            Destroy(Instantiate(bombExplose, transform.position, Quaternion.identity), 0.5f);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().destroy_shields();
+        }
+    }
 
 
 }

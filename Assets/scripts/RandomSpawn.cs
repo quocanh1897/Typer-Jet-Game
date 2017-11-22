@@ -11,7 +11,7 @@ public class RandomSpawn : MonoBehaviour {
     public GameObject danger;
     public float spawnRate = 3f;
     private float nextSpawn = 0f;
-    private int whatToSpawn;
+    public int whatToSpawn;
     private float winpoint;
     private bool see_boss;
     private bool while_see_boss;
@@ -30,31 +30,38 @@ public class RandomSpawn : MonoBehaviour {
     {
         if ((Time.time > nextSpawn)&&!see_boss)
         {
-            whatToSpawn = Random.Range(7, 9); //random jet 1 - jet 5
+            whatToSpawn = Random.Range(0, 8888); //random jet 1 - jet 5
+            whatToSpawn %= 14;
             switch (whatToSpawn)
             {
+                case 0:
                 case 1:
                     Instantiate(enemy1, transform.position, Quaternion.identity);
                     break;
                 case 2:
+                case 3:
                     Instantiate(enemy2, transform.position, Quaternion.identity);
                     break;
-                case 3:
+                case 4:
+                case 5:
                     Instantiate(enemy3, transform.position, Quaternion.identity);
                     break;
-                case 4:
+                case 6:
+                case 7:
                     Instantiate(enemy4, transform.position, Quaternion.identity);
                     break;
-                case 5:
+                case 8:
+                case 9:
                     Instantiate(enemy5, transform.position, Quaternion.identity);
                     break;
-                case 6:
+                case 10:
+                case 11:
                     Instantiate(enemy6, new Vector3(5.2f,0.5f,0f), Quaternion.identity);
                     break;
-                case 7:
+                case 12:
                     Instantiate(health7, transform.position, Quaternion.identity);
                     break;
-                case 8:
+                case 13:
                     Instantiate(armor, transform.position, Quaternion.identity);
                     break;
             }

@@ -27,7 +27,7 @@ public class planestream : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isprotect &&
             !GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isdmging)
         {
-            Debug.Log("ahihi");
+            
             shooting_shield_effect.SetActive(false);
             target.GetComponent<tanka>().create_shield_dmg();
             GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isdmging = true;

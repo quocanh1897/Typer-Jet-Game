@@ -384,7 +384,7 @@ MonoBehaviour:
   textholder: {fileID: 1446697186352876}
   target: {fileID: 1154451049398908, guid: 0cf089205a0137442bcbc8a1296e0978, type: 2}
   firework: {fileID: 1463708651866692, guid: 58faf6516ab265d4a93efbaabaac1b9d, type: 2}
-  health: 200
+  health: 1000
   speed: 5
   difficultOfWord: 3
 --- !u!114 &114932683428523984

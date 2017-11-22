@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4902767555063770}
   - component: {fileID: 212266294594748114}
-  - component: {fileID: 114398944217931402}
   - component: {fileID: 50525988348316114}
   - component: {fileID: 61328425874038960}
+  - component: {fileID: 114398944217931402}
   m_Layer: 0
   m_Name: jet7_black
   m_TagString: jet
