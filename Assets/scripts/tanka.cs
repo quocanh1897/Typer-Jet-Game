@@ -9,7 +9,6 @@ public class tanka : MonoBehaviour {
 
     public GameObject grouprocket;
     public GameObject gunsmoke;
-    public GameObject Cannonenemy;
     public GameObject shield;
     public GameObject shield_dmg;
     public GameObject explosion;
