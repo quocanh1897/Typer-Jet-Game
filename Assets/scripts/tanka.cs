@@ -51,6 +51,7 @@ public class tanka : MonoBehaviour {
         //cannon = null;
         lose_game = false;
         isdmging = false;
+        isprotect = false;
     }
 	// Update is called once per frame
 	void Update () {
@@ -186,6 +187,7 @@ public class tanka : MonoBehaviour {
     }
     public void destroy_shields()
     {
+        isprotect = false;
         Destroy(shield1, 0);
         Destroy(shield2, 0);
     }
