@@ -15,10 +15,15 @@ public class tanka_scene2 : MonoBehaviour {
     public GameObject shooting_effect; //Hieu ung ban dan tu nong sung
     public GameObject explosion;
     public GameConTroller_scene2 control;
+	public GameObject shield;
+	public GameObject shield_dmg;
     public float point;
+	public bool isprotect;
     private float start_time_explose;
     private bool isLoseGame;
     private bool isplaying;
+	private GameObject shield1;
+	private GameObject shield2;
     void Start () {
         slider_blood.maxValue = blood;
         slider_blood.value = blood;
@@ -27,7 +32,7 @@ public class tanka_scene2 : MonoBehaviour {
         point = 0;
         image_power.GetComponent<Animator>().enabled = false;
         slider_blood.minValue = 0;slider_mana.minValue = 0;
-        isLoseGame = false;isplaying = false;
+		isLoseGame = false;isplaying = false;isprotect = false;
 	}
     // Update is called once per frame
 	void Update () {
@@ -109,4 +114,23 @@ public class tanka_scene2 : MonoBehaviour {
     {
         return point;
     }
+	public void create_shield()
+	{
+		if (!isprotect) {
+			isprotect = true;
+			shield1 = Instantiate (shield, transform.position, Quaternion.identity);
+		}
+	}
+	public void create_shield_dmg()
+	{
+		isprotect = true;
+		shield2 = Instantiate(shield_dmg, transform.position, Quaternion.identity);
+	}
+	public void destroy_shields()
+	{
+		isprotect = false;
+		GameObject []shields=GameObject.FindGameObjectsWithTag("shield");
+		Destroy (shields [0], 0f);
+		Destroy(shield2, 0);
+	}
 }

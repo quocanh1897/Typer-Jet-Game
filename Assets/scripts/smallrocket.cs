@@ -32,7 +32,10 @@ public class smallrocket : MonoBehaviour {
             }
             Destroy(gameObject, 0.01f);
         }
-    }
+		if (other.gameObject.tag == "shield") {
+			Destroy (gameObject, 0.01f);
+		}
+	}
     void OnDestroy()
     {
         GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);

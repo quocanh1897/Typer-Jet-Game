@@ -13,6 +13,13 @@ public enum soundsGame
 	dropbom,
 	eat,
 	dropbomnhanh,
+	taokhien,
+	khienbiban,
+	vokhien,
+	victory,
+	winsound,
+	defeated,
+	losesound,
 }
 public class SoundController : MonoBehaviour
 {
@@ -25,7 +32,13 @@ public class SoundController : MonoBehaviour
 	public AudioClip soundDropbom;
 	public AudioClip soundDropbomnhanh;
 	public AudioClip soundEat;
-	//public AudioClip soundWing;
+	public AudioClip soundTaokhien;
+	public AudioClip soundVokhien;
+	public AudioClip soundVictory;
+	public AudioClip soundWinsound;
+	public AudioClip soundDefeated;
+	public AudioClip soundLosesound;
+	public AudioClip soundKhienbiban;
 	public static SoundController instance;
 
 	// Use this for initialization
@@ -84,6 +97,41 @@ public class SoundController : MonoBehaviour
 				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundDropbomnhanh);
 			}
 			break;
+		case soundsGame.taokhien:
+			{
+				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundTaokhien);
+			}
+			break;
+		case soundsGame.vokhien:
+			{
+				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundVokhien);
+			}
+			break;
+		case soundsGame.victory:
+			{
+				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundVictory);
+			}
+			break;
+		case soundsGame.winsound:
+			{
+				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundWinsound);
+			}
+			break;
+		case soundsGame.losesound:
+			{
+				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundLosesound);
+			}
+			break;
+		case soundsGame.defeated:
+			{
+				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundDefeated);
+			}
+			break;
+		case soundsGame.khienbiban:
+			{
+				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundKhienbiban);
+			}
+			break;
 		}
 	}
 	private void PlaySoundBomno()
@@ -121,5 +169,33 @@ public class SoundController : MonoBehaviour
 	private void PlaySoundDropBom()
 	{
 		PlaySound(soundsGame.dropbomnhanh);
+	}
+	private void PlaySoundTaokhien()
+	{
+		PlaySound(soundsGame.taokhien);
+	}
+	private void PlaySoundVokhien()
+	{
+		PlaySound(soundsGame.vokhien);
+	}
+	private void PlaySoundVictory()
+	{
+		PlaySound(soundsGame.vokhien);
+	}
+	private void PlaySoundWinsound()
+	{
+		PlaySound(soundsGame.vokhien);
+	}
+	private void PlaySoundLosesound()
+	{
+		PlaySound(soundsGame.vokhien);
+	}
+	private void PlaySoundDefeated()
+	{
+		PlaySound(soundsGame.vokhien);
+	}
+	private void PlaySoundKhienbiban()
+	{
+		PlaySound(soundsGame.khienbiban);
 	}
 }

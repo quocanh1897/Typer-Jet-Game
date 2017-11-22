@@ -30,7 +30,6 @@ public class tanka : MonoBehaviour {
     private bool Fire_GroupRocket;
     private bool lose_game;
     private float appearrate_cannon = 10f;
-
     //private float nexttime_cannon = 10f;
     private float start_destroy;
 
@@ -177,8 +176,10 @@ public class tanka : MonoBehaviour {
     }
     public void create_shield()
     {
-        isprotect = true;
-        shield1 = Instantiate(shield, transform.position, Quaternion.identity);
+		if (!isprotect) {
+			isprotect = true;
+			shield1 = Instantiate (shield, transform.position, Quaternion.identity);
+		}
     }
     public void create_shield_dmg()
     {
@@ -188,7 +189,8 @@ public class tanka : MonoBehaviour {
     public void destroy_shields()
     {
         isprotect = false;
-        Destroy(shield1, 0);
+		GameObject []shields=GameObject.FindGameObjectsWithTag("shield");
+		Destroy (shields [0], 0f);
         Destroy(shield2, 0);
     }
 }

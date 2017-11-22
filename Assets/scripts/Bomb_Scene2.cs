@@ -27,7 +27,10 @@ public class Bomb_Scene2 : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D other) //Va cham voi Player thi mat mau Player va no
     {
-        if(other.gameObject.tag=="Player")
+		if (other.gameObject.tag == "shield") {
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka_scene2> ().destroy_shields ();
+		}
+		if(other.gameObject.tag=="Player")
         {
             other.gameObject.GetComponent<tanka_scene2>().lose_heart(damage);
             other.gameObject.GetComponent<tanka_scene2>().get_mana(mana);
