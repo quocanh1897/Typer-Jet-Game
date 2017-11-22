@@ -5,24 +5,35 @@ using UnityEngine.UI;
 
 public class tanka : MonoBehaviour {
 
-    // Use this for initialization
+    public GameController control;
+
     public GameObject grouprocket;
     public GameObject gunsmoke;
     public GameObject Cannonenemy;
-    private GameObject cannon;
-    private GameObject fullmana;
+    public GameObject shield;
+    public GameObject shield_dmg;
+    public GameObject explosion;
+
+    public bool isprotect;
+    public bool isdmging;
     public float point;
     public float blood;
     public float maxmana;
-    public GameController control;
-    public GameObject explosion;
+
+    private GameObject fullmana;
+    private GameObject shield1;
+    private GameObject shield2;
     private GameObject gobj;
+
     private Slider health;
+
     private bool Fire_GroupRocket;
     private bool lose_game;
-    private float appearrate_cannon=10f;
-    private float nexttime_cannon = 10f;
+    private float appearrate_cannon = 10f;
+
+    //private float nexttime_cannon = 10f;
     private float start_destroy;
+
     void Start () {
         point = 0f;
         maxmana = 100f;
@@ -37,7 +48,7 @@ public class tanka : MonoBehaviour {
         Fire_GroupRocket = false;
         fullmana = GameObject.FindGameObjectWithTag("thunder");
         fullmana.GetComponent<Animator>().enabled=false;
-        cannon = null;
+        //cannon = null;
         lose_game = false;
     }
 	// Update is called once per frame
@@ -161,5 +172,20 @@ public class tanka : MonoBehaviour {
             Destroy(exp, 3f);
             start_destroy = Time.time;lose_game = true;
         }
+    }
+    public void create_shield()
+    {
+        isprotect = true;
+        shield1 = Instantiate(shield, transform.position, Quaternion.identity);
+    }
+    public void create_shield_dmg()
+    {
+        isprotect = true;
+        shield2 = Instantiate(shield_dmg, transform.position, Quaternion.identity);
+    }
+    public void destroy_shields()
+    {
+        Destroy(shield1, 0);
+        Destroy(shield2, 0);
     }
 }

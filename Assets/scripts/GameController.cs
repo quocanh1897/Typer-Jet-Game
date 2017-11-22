@@ -166,7 +166,10 @@ public class GameController : MonoBehaviour {
         SceneManager.LoadScene(1);
         player.GetComponent<tanka>().point = 0f;
     }
-
+	public void Next_Scene()
+	{
+		SceneManager.LoadScene(2);
+	}
     void count_down()
     {
          Countdown = Instantiate(countdown, new Vector3(0, 2.2f, 0), Quaternion.identity);

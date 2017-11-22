@@ -96,16 +96,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5df118497b826458b48f1c392e45bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  control: {fileID: 0}
   grouprocket: {fileID: 1038801758343008, guid: 1590a6f294838344bb2bcad836f00b91,
     type: 2}
   gunsmoke: {fileID: 1942930558906638, guid: cb541d5f3d84ed6478a7b3a8a33520df, type: 2}
   Cannonenemy: {fileID: 1817318488391070, guid: 80ca6d60eb454a146b937bfaaab3f278,
     type: 2}
-  point: 30
+  shield: {fileID: 1267811204804334, guid: 7f0c5c3a599873b4d8166715fe7f5b86, type: 2}
+  shield_dmg: {fileID: 1123471540300534, guid: fe4114d84cb9e3640adc23e6976026a0, type: 2}
+  explosion: {fileID: 1669984631793980, guid: 0d79012be659b4c49b26d270c62a5c57, type: 2}
+  isprotect: 0
+  isdmging: 0
+  point: 60
   blood: 11
   maxmana: 100
-  control: {fileID: 0}
-  explosion: {fileID: 1669984631793980, guid: 0d79012be659b4c49b26d270c62a5c57, type: 2}
 --- !u!212 &212194077868127874
 SpriteRenderer:
   m_ObjectHideFlags: 1

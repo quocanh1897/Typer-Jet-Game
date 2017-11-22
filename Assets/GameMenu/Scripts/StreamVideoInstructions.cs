@@ -74,9 +74,9 @@ public class StreamVideoInstructions : MonoBehaviour
     }
     void Update()
     {
-        if (ButtonManager.MainToInstructionsOn)
-            PlayBackgroundVideo();
-        if (ButtonManager.InstructionsToMainOn)
-            videoPlayer.Pause();
+        //if (ButtonManager.MainToInstructionsOn)
+        //    PlayBackgroundVideo();
+        //if (ButtonManager.InstructionsToMainOn)
+        //    videoPlayer.Pause();
     }
 }

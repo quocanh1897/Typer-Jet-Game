@@ -10,7 +10,8 @@ public class planestream : MonoBehaviour
     private GameObject target;
     public GameObject textHolder;
     private GameObject obj;
-	private float start_time_sound;
+    public GameObject shooting_shield_effect;
+    private float start_time_sound;
     private float point = 50f;
     void Start()
     {
@@ -21,23 +22,32 @@ public class planestream : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		
+
         target = GameObject.FindGameObjectWithTag("Player");
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isprotect &&
+            !GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isdmging)
+        {
+            Debug.Log("ahihi");
+            shooting_shield_effect.SetActive(false);
+            target.GetComponent<tanka>().create_shield_dmg();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().isdmging = true;
+            damage = 0;
+        }
         if (target != null)
         {
-			//SoundController.PlaySound(soundsGame.dailien);
             target.GetComponent<tanka>().loseheart(damage);
             target.GetComponent<tanka>().getmana();
         }
         float a = Mathf.Abs(obj.GetComponent<Transform>().position.x - target.GetComponent<Transform>().position.x);
-        if ( a < 11.5f && a > 11f)//planeStream di 1 doan nho thi dung lai
+        if (a < 11.5f && a > 11f)//planeStream di 1 doan nho thi dung lai
         {
-			if (Time.time >= start_time_sound) {
-				SoundController.PlaySound (soundsGame.dailien);
-				start_time_sound = Time.time + 1f;
-			}
             obj.GetComponent<jetFall>().jetSpeed = 0f;
-            //abs (5 -- 6) = 11
-        } 
+            if (Time.time >= start_time_sound)
+            {
+                SoundController.PlaySound(soundsGame.dailien);
+                start_time_sound = Time.time + 1f;
+            }
+            
+        }
     }
 }
