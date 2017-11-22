@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blood_boss: 100
   dagamed: 20
-  difficultOfWord: 2
+  difficultOfWord: 3
   point_one: 50
   speed: 2
   textholder: {fileID: 1230481754539642}

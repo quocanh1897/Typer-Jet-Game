@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4244752122178784}
   - component: {fileID: 212333376918564996}
-  - component: {fileID: 61360650744635480}
   - component: {fileID: 50407043477557598}
+  - component: {fileID: 61360650744635480}
   - component: {fileID: 114484659426358378}
   m_Layer: 0
   m_Name: jet8
