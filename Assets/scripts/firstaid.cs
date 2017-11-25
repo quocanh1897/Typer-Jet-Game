@@ -6,30 +6,39 @@ public class firstaid : MonoBehaviour {
 
     // Use this for initialization
 	public int where_scene;
-    private float health_recover = 20f;
+	public float health_recover;
     public ParticleSystem showheart;
     public GameObject oj;
     private Vector3 targetPosition;
+	private Vector3 targetPosition2;
     public GameObject target;
-
+	public GameObject target2;
+	public GameObject targetconst;
     void Start() {
         oj = gameObject;
-        targetPosition = target.GetComponent<Transform>().position;
+		targetPosition = targetconst.GetComponent<Transform> ().position;            
+		targetPosition2 = target.GetComponent<Transform> ().position; 
     }
     // Update is called once per frame
     void Update() {
-        if (Mathf.Abs(oj.GetComponent<Transform>().position.y - targetPosition.y) < 2)
+        if (Mathf.Abs(oj.GetComponent<Transform>().position.y - targetPosition.y) < 4)
         {
-            if (target.gameObject.GetComponent<tanka>())
-            {
-                target.gameObject.GetComponent<tanka>().recover(health_recover);
-            }
-            else if (target.gameObject.GetComponent<tanka_scene2>())
-            {
-                target.gameObject.GetComponent<tanka_scene2>().recover(health_recover);
-            }
+			//if (target)
+				//target.GetComponent<tanka> ().recover (health_recover);
+			if (target2)
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka_scene2> ().recover (health_recover);
             Destroy(gameObject, 0.1f);
         }
+
+		if (Mathf.Abs(oj.GetComponent<Transform>().position.y - targetPosition2.y) < 4)
+		{
+			Debug.Log ("reco");
+			if (target)
+				target.GetComponent<tanka> ().recover (health_recover);
+			if (target2)
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka> ().recover (health_recover);
+			Destroy(gameObject, 0.1f);
+		}
     }
     void OnCollisionEnter2D(Collision2D other)
     {

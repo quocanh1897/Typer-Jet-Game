@@ -63,7 +63,7 @@ public class textHolder : MonoBehaviour
         }
         return res;
     }
-
+   
     Text CreateText(Transform canvas_transform, float x, float y,
         string text_to_print, int font_size, Color text_color)
     {
@@ -114,5 +114,13 @@ public class textHolder : MonoBehaviour
         {
             diffOfWord = gameObject.transform.parent.gameObject.GetComponent<BossScene2>().difficultOfWord;
         }
+	else if(gameObject.transform.parent.gameObject.GetComponent<Boss_scene3>())
+	{
+	    diffOfWord = gameObject.transform.parent.gameObject.GetComponent<Boss_scene3>().difficultOfWord;
+	}
+	else if(gameObject.transform.parent.gameObject.GetComponent<Child_Jet>())
+	{
+             diffOfWord = gameObject.transform.parent.gameObject.GetComponent<Child_Jet>().difficultOfWord;
+	}
     }
 }

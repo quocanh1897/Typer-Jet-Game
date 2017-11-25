@@ -59,11 +59,14 @@
      <Compile Include="Assets\scripts\bg3.cs" />
      <Compile Include="Assets\scripts\Bomb_Scene2.cs" />
      <Compile Include="Assets\scripts\bombController.cs" />
+     <Compile Include="Assets\scripts\Boss_scene3.cs" />
+     <Compile Include="Assets\scripts\Boss_scene3_2.cs" />
      <Compile Include="Assets\scripts\bossscene1.cs" />
      <Compile Include="Assets\scripts\BossScene2.cs" />
      <Compile Include="Assets\scripts\bullet.cs" />
      <Compile Include="Assets\scripts\Bullet_tank_boss.cs" />
      <Compile Include="Assets\scripts\cannontype.cs" />
+     <Compile Include="Assets\scripts\Child_Jet.cs" />
      <Compile Include="Assets\scripts\firebulletmove.cs" />
      <Compile Include="Assets\scripts\firstaid.cs" />
      <Compile Include="Assets\scripts\flyplane.cs" />
@@ -156,13 +159,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Data.Sqlite">
- <HintPath>D:/unity pj/OOP/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+ <HintPath>D:/complete/OOP/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>D:/unity pj/OOP/Assets/Plugins/System.Data.dll</HintPath>
+ <HintPath>D:/complete/OOP/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.2017.1.0b12">
- <HintPath>D:/unity pj/OOP/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
+ <HintPath>D:/complete/OOP/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.1.0b12.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

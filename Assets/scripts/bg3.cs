@@ -1,9 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class bg3 : MonoBehaviour {
-    public float speed = 0.1f;
+    public float speed ;
     public Renderer rend;
 	// Use this for initialization
 	void Start () {

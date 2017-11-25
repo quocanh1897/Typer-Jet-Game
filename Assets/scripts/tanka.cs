@@ -19,7 +19,8 @@ public class tanka : MonoBehaviour {
     public float point;
     public float blood;
     public float maxmana;
-
+    public int nowscene;
+ 
     private GameObject fullmana;
     private GameObject shield1;
     private GameObject shield2;
@@ -30,7 +31,6 @@ public class tanka : MonoBehaviour {
     private bool Fire_GroupRocket;
     private bool lose_game;
     private float appearrate_cannon = 10f;
-
     //private float nexttime_cannon = 10f;
     private float start_destroy;
 
@@ -62,7 +62,7 @@ public class tanka : MonoBehaviour {
         {
             if(Time.time>start_destroy+3f)
             {
-
+				
 				Destroy(gameObject, 0.01f);lose_game = false;
             }
         }
@@ -135,7 +135,7 @@ public class tanka : MonoBehaviour {
         if(getcurrentvalueofslider("mana")==maxmana)
         {
             fullmana.GetComponent<Animator>().enabled=true;
-            if (Input.GetKey(KeyCode.Space))
+			if (Input.GetKey(ButtonManager.missilesKeyCode))
             {
 				SoundController.PlaySound(soundsGame.dropbom);
                 GameObject GroupRocket = Instantiate(grouprocket, new Vector3(1.4f, -3.4f, 0f), Quaternion.identity);
@@ -157,7 +157,7 @@ public class tanka : MonoBehaviour {
     {
        if(getcurrentvalueofslider("blood")<=0)
         {
-			//SoundController.PlaySound(soundsGame.bomno);
+			
             explose_tank();
         }
     }
@@ -177,8 +177,11 @@ public class tanka : MonoBehaviour {
     }
     public void create_shield()
     {
-        isprotect = true;
-        shield1 = Instantiate(shield, transform.position, Quaternion.identity);
+		if (!isprotect) {
+			isprotect = true;
+			SoundController.PlaySound(soundsGame.taokhien);
+			shield1 = Instantiate (shield, transform.position, Quaternion.identity);
+		}
     }
     public void create_shield_dmg()
     {
@@ -188,7 +191,9 @@ public class tanka : MonoBehaviour {
     public void destroy_shields()
     {
         isprotect = false;
-        Destroy(shield1, 0);
+		GameObject []shields=GameObject.FindGameObjectsWithTag("shield");
+		Destroy (shields [0], 0f);
+		SoundController.PlaySound(soundsGame.vokhien);
         Destroy(shield2, 0);
     }
 }

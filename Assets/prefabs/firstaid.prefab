@@ -100,10 +100,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   where_scene: 0
+  health_recover: 100
   showheart: {fileID: 198530920190876292, guid: 42973c796bc964447b8097b9ba37b4e2,
     type: 2}
   oj: {fileID: 1625552001912008}
   target: {fileID: 1154451049398908, guid: 0cf089205a0137442bcbc8a1296e0978, type: 2}
+  target2: {fileID: 1222628615541622, guid: e440aac4c88af324498a787b6b5b6f33, type: 2}
+  targetconst: {fileID: 1563080402720562, guid: c5da11d7766f4cc45b1d8dfccd2deba6,
+    type: 2}
 --- !u!212 &212272880754771066
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -113,6 +117,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -128,6 +133,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

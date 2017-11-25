@@ -104,12 +104,13 @@ MonoBehaviour:
     type: 2}
   shield: {fileID: 1267811204804334, guid: 7f0c5c3a599873b4d8166715fe7f5b86, type: 2}
   shield_dmg: {fileID: 1123471540300534, guid: fe4114d84cb9e3640adc23e6976026a0, type: 2}
-  explosion: {fileID: 1669984631793980, guid: 0d79012be659b4c49b26d270c62a5c57, type: 2}
+  explosion: {fileID: 1877891436454594, guid: 9aa48a9a9f6b2e94995e81a8837b3fa7, type: 2}
   isprotect: 0
   isdmging: 0
-  point: 60
-  blood: 11
+  point: 0
+  blood: 700
   maxmana: 100
+  nowscene: 1
 --- !u!212 &212194077868127874
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -37,8 +37,7 @@ public class bossscene1 : MonoBehaviour {
     private float direction;
     void Start () {
         damage_rocket = 10f;
-        damage_stream = 0.1f;
-        health = 50f;
+        damage_stream = 0.3f;
         point = 500f;
         speed_high = 5f;
         point_one = 50f;
@@ -61,20 +60,20 @@ public class bossscene1 : MonoBehaviour {
             if (a < 11.5f && a > 11f && !stop_boss)//Boss di 1 doan nho thi dung lai
             {
                 textholder.SetActive(true);
-                speed = 0; attack = true;stop_boss = true;
-                oldposition = transform.position.y;highposition = transform.position.y+2f;
+                speed = 0; attack = true;
+				stop_boss = true;
+                oldposition = transform.position.y;
+				highposition = transform.position.y+2f;
                 lowposition = transform.position.y - 2f;
                 
             }
             if (attack)
             {
-				//SoundController.PlaySound(soundsGame.dailien);
+				
                 make_oscillate();
-                GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().loseheart(damage_stream);
+				target.GetComponent<tanka>().loseheart(damage_stream);
                 fire_rocket();
-				//SoundController.PlaySound(soundsGame.bomno);
                 change_text();
-				//SoundController.PlaySound(soundsGame.bomno);
                 die_boss();
             }
         }
@@ -85,9 +84,11 @@ public class bossscene1 : MonoBehaviour {
 			
             if(Time.time>=start_firework+7f)
             {
-				//SoundController.PlaySound(soundsGame.dailien);
                 Destroy(Firework, 0.01f);fire_work = false;
+
                 Destroy(gameObject, 0.01f);
+
+
 				SoundController.PlaySound(soundsGame.bomno);
             }
         }
@@ -141,11 +142,12 @@ public class bossscene1 : MonoBehaviour {
     }
     void show_firework()
     {
-		////SoundController.PlaySound(soundsGame.dailien);
         if (!fire_work)
         {
             Firework = Instantiate(firework, new Vector3(0, -3f, 0), Quaternion.identity);
             start_firework = Time.time;fire_work = true;
+			SoundController.PlaySound(soundsGame.victory);
+			SoundController.PlaySound(soundsGame.winsound);
         }
     }
     void explose()

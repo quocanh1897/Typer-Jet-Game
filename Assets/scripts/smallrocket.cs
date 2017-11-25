@@ -8,11 +8,10 @@ public class smallrocket : MonoBehaviour {
     public GameObject target;
     public GameObject explosion;
     public float speed;
-    private float damage;
+    public float damage;
     private Rigidbody2D rb;
     private GameObject warhead;
     void Start () {
-        damage = 5f;
     }
 	// Update is called once per frame
 	void Update () {
@@ -32,11 +31,15 @@ public class smallrocket : MonoBehaviour {
             }
             Destroy(gameObject, 0.01f);
         }
-    }
+		if (other.gameObject.tag == "shield") {
+			Destroy (gameObject, 0.01f);
+		}
+	}
     void OnDestroy()
     {
         GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
-		SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
+
         Destroy(exp, 0.2f);
+		SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class planestream : MonoBehaviour
 {
-	private float damage = 0.1f;
+	public float damage;
     public GameObject explose;
     private GameObject target;
     public GameObject textHolder;

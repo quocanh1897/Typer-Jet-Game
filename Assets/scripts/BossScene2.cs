@@ -71,7 +71,7 @@ public class BossScene2 : MonoBehaviour {
     {
 		SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
 		GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(exp, 0.5f);
+                Destroy(exp, 0.5f);
     }
     void fire_bullet() //Ban 1 vien dan tai nong sung ria cua boss, moi giay ban 1 vien 
     {

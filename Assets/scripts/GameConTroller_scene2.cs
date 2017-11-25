@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using System.Data;
+using Mono.Data.Sqlite;
 public class GameConTroller_scene2 : MonoBehaviour {
     [SerializeField]
     // Use this for initialization
@@ -38,6 +39,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
     private float start_fire_work;
     private bool win_game;
     private bool fire_work;
+    private bool iswingame;
     private GameObject Boss;
     private GameObject Firework;
     private GameObject Danger;
@@ -54,6 +56,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
         while_see_boss = false;win_game = false;
         start_see_boss = false;
         start_fire_work = Time.time;fire_work = false;
+	iswingame=false;
 	}
 	
 	// Update is called once per frame
@@ -106,7 +109,7 @@ public class GameConTroller_scene2 : MonoBehaviour {
             {
                 Destroy(Firework, 0.01f);win_game = false; //Huy phao hoa
                 Destroy(Boss, 0.01f); //Huy Boss
-                Win_game();
+                Win_game();iswingame=true;
             }
 			SoundController_2.PlaySound_2(soundsGame_2.bomnonhanh);
         }
@@ -139,15 +142,26 @@ public class GameConTroller_scene2 : MonoBehaviour {
     }
     public void Restart_Game() //Ham nay xu ly khi thua game va muon choi lai
     {
-        Panel_lose.SetActive(false);
+        set_info_player("1",0,0,0);
+	if(iswingame) Panel_win.SetActive(false);
+	else Panel_lose.SetActive(false);
         isStartGame = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(nowplayer.GetComponent<tanka_scene2>().nowscene);
     }
     public void New_Game() //Ham nay xu ly khi win game va muon choi lai
     {
-        Panel_win.SetActive(false);
+        set_info_player("1",0,0,0);
+	if(iswingame) Panel_win.SetActive(false);
+	else Panel_lose.SetActive(false);
         isStartGame = true;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
+    }
+    public void Next_Scene()
+    {
+	//float point_save;
+	//if(nowplayer.GetComponent<tanka_scene2>()) point_save=nowplayer.GetComponent<tanka_scene2>().point;
+	set_info_player("1",nowplayer.GetComponent<tanka_scene2>().point,0,0);
+	SceneManager.LoadScene(nowplayer.GetComponent<tanka_scene2>().nowscene+1);
     }
     public void see_boss() //Ham nay xu ly giai doan chuan bi gap boss
     {
@@ -168,7 +182,13 @@ public class GameConTroller_scene2 : MonoBehaviour {
     { 
         if(!while_see_boss) //Bien nay chac chan rang boss chi tao ra dung 1 lan
         {
-            Boss = Instantiate(boss_scene, new Vector3(11.87f,-3.37f, 0), Quaternion.identity);
+            if(nowplayer.GetComponent<tanka_scene2>().nowscene==2)
+	    {Boss = Instantiate(boss_scene, new Vector3(11.87f,-3.37f, 0), Quaternion.identity);}
+	    else if(nowplayer.GetComponent<tanka_scene2>().nowscene==3)
+	    {
+				Boss = Instantiate(boss_scene, new Vector3(14.15f,2.54f, 0), Quaternion.identity);
+				SoundController.PlaySound(soundsGame.khienbiban);
+		}
             while_see_boss = true;
         }
     }
@@ -195,7 +215,8 @@ public class GameConTroller_scene2 : MonoBehaviour {
     {
         if(blood_of_boss.value<=0)
         {
-            Fire_work(); //Neu da chet thi xuat hieu ung phao hoa ra
+            	Debug.Log("ahuhu");
+		Fire_work(); //Neu da chet thi xuat hieu ung phao hoa ra
         }
     }
     void Fire_work()
@@ -206,7 +227,21 @@ public class GameConTroller_scene2 : MonoBehaviour {
 
             start_fire_work = Time.time; fire_work = true; //Xac dinh moc thoi gian de phao hoa bi destroy
             win_game = true;
-            Boss.GetComponent<BossScene2>().at_die();
+			SoundController.PlaySound(soundsGame.victory);
+			SoundController.PlaySound(soundsGame.winsound);
+            if(nowplayer.GetComponent<tanka_scene2>().nowscene==2)
+	    {Boss.GetComponent<BossScene2>().at_die();}
+	    else if(nowplayer.GetComponent<tanka_scene2>().nowscene==3)
+	    {Boss.GetComponent<Boss_scene3>().at_die();}
         }
     }
-}
+     public void set_info_player(string id,float point,float blood,float mana)
+    {
+	SqliteConnection sql_con = new SqliteConnection("Data Source="+Application.dataPath+"\\words.db;"+"Version=3;New=False;Compress=True");
+        sql_con.Open();
+        SqliteCommand sql_cmd = sql_con.CreateCommand();
+	sql_cmd.CommandText = "UPDATE highscore SET Point='" +point+ "',HP='" +blood+ "',MP='" +mana+"' WHERE ID='1'";
+        sql_cmd.ExecuteNonQuery();
+        sql_con.Close();
+    }
+ }

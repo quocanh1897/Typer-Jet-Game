@@ -12,7 +12,7 @@ public class RandomSpawn : MonoBehaviour {
     public float spawnRate = 3f;
     private float nextSpawn = 0f;
     public int whatToSpawn;
-    private float winpoint;
+    public float see_boss_point;
     private bool see_boss;
     private bool while_see_boss;
     private bool while_danger;
@@ -21,7 +21,7 @@ public class RandomSpawn : MonoBehaviour {
     // Update is called once per frame
     void Start()
     {
-        winpoint = 100f;
+        
         see_boss = false;
         while_see_boss = false;
         while_danger = false;
@@ -74,7 +74,7 @@ public class RandomSpawn : MonoBehaviour {
     {
         if (boss != null)
         {
-            if ((player.GetComponent<tanka>().point>=winpoint)&&!while_see_boss)
+            if ((player.GetComponent<tanka>().point>=see_boss_point)&&!while_see_boss)
             {
                 see_boss = true;clean_before_see_boss();
                 if(Time.time>=start_danger+2.5f)

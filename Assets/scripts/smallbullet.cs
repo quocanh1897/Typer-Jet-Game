@@ -46,5 +46,9 @@ public class smallbullet : MonoBehaviour
 			Destroy(gameObject, 0.01f);
             other.gameObject.GetComponent<tanka_scene2>().lose_heart(damage);
         }
+	else if(other.gameObject.tag == "shield")
+	{
+		Destroy(gameObject,0.01f);
+	}
     }
 }

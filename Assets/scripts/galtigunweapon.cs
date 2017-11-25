@@ -59,7 +59,7 @@ public class galtigunweapon : MonoBehaviour {
                 }
                 transform.rotation = Quaternion.Euler(0, 0, z_rotate);
 				/////////////////////////dat dau ban dai lien
-				 SoundController_2.PlaySound_2(soundsGame_2.galting);
+				 SoundController.PlaySound(soundsGame.dailien);
                 GameObject Small_bullet = Instantiate(small_bullet, warhead.GetComponent<Transform>().position, Quaternion.Euler(0, 0, z_rotate));
             }
             else { fire = false; smoke.SetActive(false); }

@@ -507,22 +507,6 @@ Prefab:
       propertyPath: control
       value: 
       objectReference: {fileID: 1248643726}
-    - target: {fileID: 114564297989499004, guid: 0cf089205a0137442bcbc8a1296e0978,
-        type: 2}
-      propertyPath: point
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114564297989499004, guid: 0cf089205a0137442bcbc8a1296e0978,
-        type: 2}
-      propertyPath: blood
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 114564297989499004, guid: 0cf089205a0137442bcbc8a1296e0978,
-        type: 2}
-      propertyPath: explosion
-      value: 
-      objectReference: {fileID: 1877891436454594, guid: 9aa48a9a9f6b2e94995e81a8837b3fa7,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cf089205a0137442bcbc8a1296e0978, type: 2}
   m_IsPrefabParent: 0
@@ -1624,6 +1608,7 @@ MonoBehaviour:
   danger: {fileID: 1955409338040760, guid: e6aa25201df916643b3cb3f0d166cc2e, type: 2}
   spawnRate: 4
   whatToSpawn: 0
+  see_boss_point: 200
 --- !u!4 &995426632
 Transform:
   m_ObjectHideFlags: 0

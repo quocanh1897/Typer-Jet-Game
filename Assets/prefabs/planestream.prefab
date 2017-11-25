@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e62e8678b9531f438205c3e12726f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0.4
   explose: {fileID: 1151779604551188, guid: ad0b00ea79c98a246ac3101ec70fd9ae, type: 2}
   textHolder: {fileID: 1955870147470736, guid: 5725abaf73a1c844e9ad192341914770, type: 2}
   shooting_shield_effect: {fileID: 1334739484960608}

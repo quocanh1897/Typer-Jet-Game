@@ -3,8 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-
-
+using System.Data;
+using Mono.Data.Sqlite;
 public class GameController : MonoBehaviour {
    [SerializeField]
     private InputField input;
@@ -126,6 +126,7 @@ public class GameController : MonoBehaviour {
                     break;
                 }
         }
+	
     }
 
     public void WinGame()
@@ -147,32 +148,72 @@ public class GameController : MonoBehaviour {
     public void StartGame()
     {
         panelstart.SetActive(false);
-        player.GetComponent<tanka>().point = 0f;
+        player.GetComponent<tanka>().point =float.Parse(get_old_point("1"));
         Time.timeScale = 1;
         count_down();
-		SoundController.PlaySound(soundsGame.ready);
+	SoundController.PlaySound(soundsGame.ready);
     }
 
     public void RestartGame()
     {
-       panelend.SetActive(false);
-       SceneManager.LoadScene(1);
+       set_info_player("1",0,player.GetComponent<tanka>().blood,0);
+       if(isendgames) panelend.SetActive(false);
+       else if(iswingames) panelwin.SetActive(false);
+       SceneManager.LoadScene(player.GetComponent<tanka>().nowscene);
        player.GetComponent<tanka>().point = 0f;
     }
 
-    public void Startnewgame()
+    public void NewGame()
     {
-        panelwin.SetActive(false);
+        set_info_player("1",0,0,0);
+	if(isendgames) panelend.SetActive(false);
+       	else if(iswingames) panelwin.SetActive(false);
         SceneManager.LoadScene(1);
         player.GetComponent<tanka>().point = 0f;
     }
-	public void Next_Scene()
-	{
-		SceneManager.LoadScene(2);
-	}
+    public void Next_Scene()
+    {
+	set_info_player("1",player.GetComponent<tanka>().point,player.GetComponent<tanka>().blood,0);
+	SceneManager.LoadScene(player.GetComponent<tanka>().nowscene+1);
+    }
     void count_down()
     {
          Countdown = Instantiate(countdown, new Vector3(0, 2.2f, 0), Quaternion.identity);
          time_start_game = Time.time;
+    }
+    public void set_info_player(string id,float point,float blood,float mana)
+    {
+	SqliteConnection sql_con = new SqliteConnection("Data Source="+Application.dataPath+"\\words.db;"+"Version=3;New=False;Compress=True");
+        sql_con.Open();
+        SqliteCommand sql_cmd = sql_con.CreateCommand();
+	sql_cmd.CommandText = "UPDATE highscore SET Point='" +point+ "',HP='" +blood+ "',MP='" +mana+"' WHERE ID='1'";
+        sql_cmd.ExecuteNonQuery();
+        sql_con.Close();
+    }
+    public string get_old_point(string id)
+    {
+	string res = "";string connectionString="URI=file:" + Application.dataPath + "/words.db";
+        using (IDbConnection dbConnection = new SqliteConnection(connectionString))
+        {
+            dbConnection.Open();
+
+            using (IDbCommand dbCmd = dbConnection.CreateCommand())
+            {
+                int num =UnityEngine.Random.Range(1, 1223);
+                string sqlQuery = "SELECT * from highscore where ID = '" +id+ "'";
+                dbCmd.CommandText = sqlQuery;
+
+                using (IDataReader reader = dbCmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        res = reader.GetString(2);
+                    }
+                    dbConnection.Close();
+                    reader.Close();
+                }
+            }
+        }
+        return res;
     }
 }

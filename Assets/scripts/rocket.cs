@@ -58,6 +58,7 @@ public class rocket : MonoBehaviour
         InputField attack = InputField.FindObjectOfType<InputField>();
         attack.text = null;
         Destroy(gameObject, 0.01f);
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {

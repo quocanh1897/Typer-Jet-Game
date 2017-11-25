@@ -51,7 +51,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -141,3 +141,10 @@ MonoBehaviour:
   soundDropbom: {fileID: 8300000, guid: 78c202f9a45b8fd438fbd0a8ccd10eb8, type: 3}
   soundDropbomnhanh: {fileID: 8300000, guid: bd88a06834d594f4592255ffe5c3c501, type: 3}
   soundEat: {fileID: 8300000, guid: 5ed33b26a0f487a499e0c14cb3f51052, type: 3}
+  soundTaokhien: {fileID: 8300000, guid: ace7b569040358a47a14b6b652f51456, type: 3}
+  soundVokhien: {fileID: 8300000, guid: 929f9d66be2bb8d469d071c1330b651d, type: 3}
+  soundVictory: {fileID: 8300000, guid: d552b9ef97751ac4d98da259f5caedd8, type: 3}
+  soundWinsound: {fileID: 8300000, guid: 2b2f5bc1ea73ad049bb94b97ec4f5d93, type: 3}
+  soundDefeated: {fileID: 8300000, guid: 3f150ac39a7df8345b3c9a887bec7d1e, type: 3}
+  soundLosesound: {fileID: 8300000, guid: 3f150ac39a7df8345b3c9a887bec7d1e, type: 3}
+  soundKhienbiban: {fileID: 8300000, guid: 4c48d83f6563ca84cb0a2ff1005357d8, type: 3}

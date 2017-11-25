@@ -12,7 +12,7 @@ public class Bomb_Scene2 : MonoBehaviour {
     public int type_boom; //Bien nay xac dinh boom tha ra la boom, do minh quyet dinh, hien gio co 2 loai: boom thuong, boom nguyen tu
 	void Start () {
         mana = 20f;
-        moveSpeed = 5f;
+        moveSpeed = 8f;
         if (type_boom == 0) { damage = 10f; }
         else if(type_boom==1) { damage = 50f;}
 	}
@@ -22,12 +22,15 @@ public class Bomb_Scene2 : MonoBehaviour {
         { transform.Translate(new Vector3(0, -1 * Time.deltaTime * moveSpeed, 0)); }
         if(type_boom==1) //Neu la may bay cho boom nguyen tu => roi cham
         {
-          transform.Translate(new Vector3(0, -1 * Time.deltaTime * 2, 0));
+          transform.Translate(new Vector3(0, -1 * Time.deltaTime * moveSpeed, 0));
         }
     }
     void OnCollisionEnter2D(Collision2D other) //Va cham voi Player thi mat mau Player va no
     {
-        if(other.gameObject.tag=="Player")
+		if (other.gameObject.tag == "shield") {
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka_scene2> ().destroy_shields ();
+		}
+		if(other.gameObject.tag=="Player")
         {
             other.gameObject.GetComponent<tanka_scene2>().lose_heart(damage);
             other.gameObject.GetComponent<tanka_scene2>().get_mana(mana);

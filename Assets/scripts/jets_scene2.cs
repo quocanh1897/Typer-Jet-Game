@@ -13,14 +13,14 @@ public class jets_scene2 : MonoBehaviour {
     public GameObject rocket;
     public int difficultOfWord;
     public int type_jet; //Bien nay xac dinh loai may bay nao, do minh tu tao, hien tai co 3 loai
-    private float moveSpeed;
+    public float moveSpeed;
     private float mana;
     private float point;
     private bool drop_boom;
     private float start_time_drop_boom; //Bien nay su dung doi voi may bay tha boom chum
     private float start_time_fire_rocket; //Bien nay su dung doi voi may bay ban rocket
     void Start () {
-        moveSpeed = 2f;	drop_boom = false;
+        drop_boom = false;
         textholder.GetComponentInChildren<textHolder>().keyOfJet.fontSize = 20;
         start_time_drop_boom = Time.time;
         start_time_fire_rocket = Time.time;

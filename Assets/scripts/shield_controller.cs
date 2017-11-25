@@ -17,7 +17,11 @@ public class shield_controller : MonoBehaviour {
 	void Update () {
         if (Mathf.Abs(obj.GetComponent<Transform>().position.y - targetPosition.y) < 0.4)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<tanka>().create_shield();
+			if (GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka> ()) {
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka> ().create_shield ();
+			} else if (GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka_scene2> ()) {
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<tanka_scene2> ().create_shield ();
+			}
             Destroy(obj, 0f);
 
             //Instantiate(target.GetComponent<tanka>().shield, targetPosition, Quaternion.identity);
