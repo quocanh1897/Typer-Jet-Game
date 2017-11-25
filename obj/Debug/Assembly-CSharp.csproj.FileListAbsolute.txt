@@ -147,6 +147,7 @@ C:\Users\duytr\Desktop\OO1\OOP\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 C:\Users\duytr\Desktop\OO1\OOP\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\duytr\Desktop\OO1\OOP\obj\Debug\Assembly-CSharp.dll
 C:\Users\duytr\Desktop\OO1\OOP\obj\Debug\Assembly-CSharp.pdb
+<<<<<<< HEAD
 C:\Users\duytr\Desktop\complete\OOP\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\duytr\Desktop\complete\OOP\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\duytr\Desktop\complete\OOP\Temp\bin\Debug\Mono.Data.Sqlite.dll
@@ -188,3 +189,5 @@ C:\Users\duytr\Desktop\complete\OOP\Temp\bin\Debug\UnityEngine.SpatialTracking.x
 C:\Users\duytr\Desktop\complete\OOP\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\duytr\Desktop\complete\OOP\obj\Debug\Assembly-CSharp.dll
 C:\Users\duytr\Desktop\complete\OOP\obj\Debug\Assembly-CSharp.pdb
+=======
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99

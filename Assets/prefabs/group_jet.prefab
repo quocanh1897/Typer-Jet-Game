@@ -62,7 +62,11 @@ GameObject:
   - component: {fileID: 114637916860462534}
   m_Layer: 0
   m_Name: planearmor
+<<<<<<< HEAD
   m_TagString: jet
+=======
+  m_TagString: Untagged
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1221,7 +1225,10 @@ MonoBehaviour:
   rocket: {fileID: 0}
   difficultOfWord: 2
   type_jet: 1
+<<<<<<< HEAD
   moveSpeed: 2.5
+=======
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
 --- !u!114 &114637916860462534
 MonoBehaviour:
   m_ObjectHideFlags: 1

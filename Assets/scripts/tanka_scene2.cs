@@ -35,8 +35,12 @@ public class tanka_scene2 : MonoBehaviour {
         point = float.Parse(get_old_point("1"));
         image_power.GetComponent<Animator>().enabled = false;
         slider_blood.minValue = 0;slider_mana.minValue = 0;
+<<<<<<< HEAD
 	isLoseGame = false;isplaying = false;isprotect = false;
 	get_point(0);
+=======
+		isLoseGame = false;isplaying = false;isprotect = false;
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
 	}
     // Update is called once per frame
 	void Update () {
@@ -132,7 +136,10 @@ public class tanka_scene2 : MonoBehaviour {
 	{
 		if (!isprotect) {
 			isprotect = true;
+<<<<<<< HEAD
 			SoundController.PlaySound(soundsGame.taokhien);
+=======
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
 			shield1 = Instantiate (shield, transform.position, Quaternion.identity);
 		}
 	}
@@ -145,6 +152,7 @@ public class tanka_scene2 : MonoBehaviour {
 	{
 		isprotect = false;
 		GameObject []shields=GameObject.FindGameObjectsWithTag("shield");
+<<<<<<< HEAD
 		SoundController.PlaySound(soundsGame.vokhien);
 		Destroy (shields [0], 0f);
 		Destroy(shield2, 0);
@@ -175,4 +183,9 @@ public class tanka_scene2 : MonoBehaviour {
         }
         return res;
     }
+=======
+		Destroy (shields [0], 0f);
+		Destroy(shield2, 0);
+	}
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
 }

@@ -9,7 +9,6 @@ public class tanka : MonoBehaviour {
 
     public GameObject grouprocket;
     public GameObject gunsmoke;
-    public GameObject Cannonenemy;
     public GameObject shield;
     public GameObject shield_dmg;
     public GameObject explosion;
@@ -179,7 +178,10 @@ public class tanka : MonoBehaviour {
     {
 		if (!isprotect) {
 			isprotect = true;
+<<<<<<< HEAD
 			SoundController.PlaySound(soundsGame.taokhien);
+=======
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
 			shield1 = Instantiate (shield, transform.position, Quaternion.identity);
 		}
     }
@@ -193,7 +195,10 @@ public class tanka : MonoBehaviour {
         isprotect = false;
 		GameObject []shields=GameObject.FindGameObjectsWithTag("shield");
 		Destroy (shields [0], 0f);
+<<<<<<< HEAD
 		SoundController.PlaySound(soundsGame.vokhien);
+=======
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
         Destroy(shield2, 0);
     }
 }

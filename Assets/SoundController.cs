@@ -130,9 +130,12 @@ public class SoundController : MonoBehaviour
 		case soundsGame.khienbiban:
 			{
 				instance.GetComponent<AudioSource>().PlayOneShot(instance.soundKhienbiban);
+<<<<<<< HEAD
 				//instance.GetComponent<AudioSource>().PlayDelayed(instance.soundKhienbiban);
 				//AudioSource clip= instance.GetComponent<AudioSource>().PlayOneShot(instance.soundKhienbiban);
 				//clip.loop = true;
+=======
+>>>>>>> fd64d57372834d0be14c1eeeab3129584c01bd99
 			}
 			break;
 		}
